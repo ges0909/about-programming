@@ -1,0 +1,26 @@
+{
+  "name": "vuepress-doc-pipiline",
+  "version": "0.0.1",
+  "license": "UNLICENSED",
+  "private": true,
+  "description": "",
+  "keywords": [
+    "vue",
+    "vuepress"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ges0909/vuepress-demo.git"
+  },
+  "author": "ges0909",
+  "contributors": [],
+  "dependencies": {},
+  "devDependencies": {
+    "pandoc": "*",
+    "vuepress": "*"
+  },
+  "scripts": {
+    "dev": "vuepress dev",
+    "build": "vuepress build"
+  }
+}

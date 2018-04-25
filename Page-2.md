@@ -1,8 +1,8 @@
 ---
-title: Page 2
+title: Images
 lang: en-US
 # sidebar: auto
 ---
-# Page 2
+# Images
 
-This is another page where stuff must be still added.
+![Freche Mira](./images/freche-mira.jpg)

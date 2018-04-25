@@ -1,5 +1,6 @@
 ---
 title: Home
+home: false
 lang: en-US
 #sidebar: auto
 ---
@@ -22,7 +23,7 @@ As precondition install [Node.js](https://nodejs.org/en/) with _npm_ on you loca
 ## Vue templates
 
 <ul>
-<li v-for="i of 3">{{i}}</li>
+  <li v-for="i of 3">{{i}}</li>
 </ul>
 
 ## Vue components

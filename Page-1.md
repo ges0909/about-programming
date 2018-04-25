@@ -1,15 +1,13 @@
 ---
-title: Page 1
+title: Components
 lang: en-US
 meta:
   - name: vue vuepress
   - content:  vue vuepress
 # sidebar: auto
 ---
-# Page 1
+# Adding Components
 
-Here something has to be added to this page.
-
-**Our Component:**
+**My Component:**
 
 <NumberModifier :start="5"></NumberModifier>
