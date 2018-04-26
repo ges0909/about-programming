@@ -17,12 +17,16 @@ as alternative to [npm](https://www.npmjs.com/).
 * install _VuePress_ globally with `npm install -g vuepress`
 * create a project folder and navigate to it
 * create a file _README.md_ and edit it
-* `vuepress dev` starts server with live reloading
-* browse to `http://localhost:8080`
+* `vuepress dev` starts a web server with live reloading and deploys your assets to it
+* browse to [http://localhost:8080](http://localhost:8080)
 
 ## How to deliver a VuePress project
 
-* `vuepress build` stores minified results in `.vuepress/dist`
+```bash
+$ vuepress build
+```
+
+stores your minified assets in `.vuepress/dist`
 
 ## Where to learn more
 

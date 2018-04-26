@@ -1,8 +1,8 @@
 ---
-title: Inserting images
+title: Images
 lang: en-US
 # sidebar: auto
 ---
-# Inserting images
+# Images
 
 ![Freche Mira](../img/freche-mira.jpg)

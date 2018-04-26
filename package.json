@@ -16,11 +16,14 @@
   "contributors": [],
   "dependencies": {},
   "devDependencies": {
+    "vuepress": "*",
     "pandoc": "*",
-    "vuepress": "*"
+    "del-cli": "*"
   },
   "scripts": {
     "dev": "vuepress dev",
-    "build": "vuepress build"
+    "prebuild": "del-cli .vuepress/dist -f",
+    "build": "vuepress build",
+    "doc": "npx pandoc --help"
   }
 }

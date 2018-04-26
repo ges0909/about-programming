@@ -7,6 +7,7 @@ module.exports = {
       '/',
       '/src/page-1',
       '/src/page-2',
+      '/src/page-4',
       '/src/page-3',
       '/src/contact',
       '/src/about'
