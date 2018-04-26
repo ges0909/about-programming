@@ -5,10 +5,11 @@ module.exports = {
   themeConfig: {
     sidebar: [
       '/',
-      '/Page-1',
-      '/Page-2',
-      '/contact',
-      '/about'
+      '/src/page-1',
+      '/src/page-2',
+      '/src/page-3',
+      '/src/contact',
+      '/src/about'
     ]
   }
 }
