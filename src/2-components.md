@@ -1,5 +1,5 @@
 ---
-title: Vue Components
+title: Components
 lang: en-US
 meta:
   - name: vue vuepress
@@ -32,6 +32,10 @@ export default {
   }
 }
 </script>
+```
+
+```javascript
+<NumberModifier :start="5"></NumberModifier>
 ```
 
 renders to

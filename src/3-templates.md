@@ -1,5 +1,5 @@
 ---
-title: Vue Templates
+title: Templates
 home: false
 lang: en-US
 ---
@@ -9,12 +9,12 @@ The template
 
 ```javascript
 <ul>
-  <li v-for="i of 3">{{i}}</li>
+  <li v-for="i of 3"> {{i}} </li>
 </ul>
 ```
 
 renders to
 
 <ul>
-  <li v-for="i of 3">{{i}}</li>
+  <li v-for="i of 3"> {{i}} </li>
 </ul>
