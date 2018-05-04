@@ -23,7 +23,7 @@ as alternative to [npm](https://www.npmjs.com/).
 ## How to deliver a VuePress project
 
 ```bash
-$ vuepress build
+vuepress build
 ```
 
 stores your minified assets in `.vuepress/dist`
