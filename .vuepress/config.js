@@ -11,7 +11,8 @@ module.exports = {
       '/src/4-containers',
       '/src/9-vuejs',
       '/src/contact',
-      '/src/about'
+      '/src/about',
+      '/src/sonarlint',
     ],
     sidebarDepth: 0
   }
