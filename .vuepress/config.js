@@ -9,6 +9,7 @@ module.exports = {
       '/src/2-components',
       '/src/3-templates',
       '/src/4-containers',
+      '/src/8-node',
       '/src/9-vuejs',
       '/src/contact',
       '/src/about',

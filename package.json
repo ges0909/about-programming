@@ -16,9 +16,9 @@
   "contributors": [],
   "dependencies": {},
   "devDependencies": {
-    "vuepress": "*",
+    "del-cli": "*",
     "pandoc": "*",
-    "del-cli": "*"
+    "vuepress": "*"
   },
   "scripts": {
     "dev": "vuepress dev",
