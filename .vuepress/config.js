@@ -12,8 +12,7 @@ module.exports = {
       '/src/8-node',
       '/src/9-vue',
       '/src/contact',
-      '/src/about',
-      '/src/sonarlint',
+      '/src/about'
     ],
     sidebarDepth: 0
   }
