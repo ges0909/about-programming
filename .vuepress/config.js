@@ -10,7 +10,6 @@ module.exports = {
       '/src/3-templates',
       '/src/4-containers',
       '/src/8-node',
-      '/src/9-vue',
       '/src/contact',
       '/src/about'
     ],

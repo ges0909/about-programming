@@ -14,19 +14,33 @@ as alternative to [npm](https://www.npmjs.com/).
 
 ## How to setup a VuePress project
 
-* install _VuePress_ globally with `npm install -g vuepress`
+* install _VuePress_ globally
+
+```bash
+npm install -g vuepress
+```
+
+or
+
+```bash
+yarn global add vuepress
+```
+
 * create a project folder and navigate to it
 * create a file _README.md_ and edit it
-* `vuepress dev` starts a web server with live reloading and deploys your assets to it
+* starts a web server with live reloading and deploys your assets to it
+
+```bash
+vuepress dev
+```
+
 * browse to [http://localhost:8080](http://localhost:8080)
 
-## How to deliver a VuePress project
+* build to static files and stores your minified assets in `.vuepress/dist`
 
 ```bash
 vuepress build
 ```
-
-stores your minified assets in `.vuepress/dist`
 
 ## Where to learn more
 
