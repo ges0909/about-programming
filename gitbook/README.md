@@ -30,6 +30,8 @@ yarn gitbook pdf docs/ docs/mybook.pdf
 
 ## Webpack
 
+Copy generated _gitbook_ files as static assets to your project's `dist` folder.
+
 ```bash
 yarn add copy-webpack-plugin --dev
 ```

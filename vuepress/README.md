@@ -131,8 +131,30 @@ This is a dangerous warning
 
 ## Netlify
 
+Add _vuepress_ as local dependency.
+
+```bash
+yarn add vuepress --dev
+```
+
+Edit _scripts_ section to generated _package.json_.
+
+```json
+{
+  "scripts": {
+    "dev": "vuepress dev",
+    "build": "vuepress build"
+  },
+  "devDependencies": {
+    "vuepress": "^0.10.2"
+  }
+}
+```
+
+Configure deploy settings on [netlify](https://www.netlify.com/).
+
 | Deploy settings   |                  |
 | ----------------- | ---------------- |
-| Build command     | `npm run build`  |
+| Build command     | `yarn build`  |
 | Publish directory | `.vuepress/dist` |
 | Production branch | `develop`        |
