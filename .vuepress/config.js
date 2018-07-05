@@ -1,4 +1,5 @@
 module.exports = {
+  base: '/',
   title: "How to",
   description: "A personal collection of my how to's",
   port: 2511,
