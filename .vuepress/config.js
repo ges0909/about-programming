@@ -14,8 +14,7 @@ module.exports = {
         items: [
           { text: 'Vuepress', link: '/vuepress/' },
           { text: 'Node', link: '/node/' },
-          { text: 'Yarn/Npm', link: '/yarn_npm/' },
-          { text: 'Gitbook', link: '/gitbook/' }
+          { text: 'Yarn/Npm', link: '/yarn_npm/' }
         ]
       },
       {
@@ -23,6 +22,13 @@ module.exports = {
         items: [
           { text: 'Date/Time', link: '/date_time/' },
           { text: 'Streams', link: '/streams/' }
+        ]
+      },
+      {
+        text: 'Git',
+        items: [
+          { text: 'Git', link: '/git/' },
+          { text: 'Gitbook', link: '/gitbook/' }
         ]
       }
     ],
