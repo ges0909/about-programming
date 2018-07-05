@@ -8,15 +8,19 @@ lang: en-US
 ```bash
 # install gitbook cli
 yarn add gitbook-cli --dev
-# create 'docs' folder and initialize project
-yarn gitbook init docs
+# install http-server
+yarn add http-server
+# initialize project
+yarn gitbook init
 # run server
-yarn gitbook serve docs
+yarn gitbook serve
 # build static website
-yarn gitbook build [--debug] docs
+yarn gitbook build --debug
+# run website (requires 'node.js')
+yarn http-server _book 
 ```
 
-See [gitbook toolchain documentation](https://toolchain.gitbook.com/).
+See more [Gitbook Toolchain](https://toolchain.gitbook.com/) and [http-server](https://github.com/indexzero/http-server)
 
 ## Pdf
 
@@ -28,7 +32,7 @@ yarn add ebook-convert --dev
 yarn gitbook pdf docs/ docs/mybook.pdf
 ```
 
-## Webpack
+## Optional: Webpack
 
 Copy generated _gitbook_ files as static assets to your project's `dist` folder.
 
@@ -38,9 +42,9 @@ yarn add copy-webpack-plugin --dev
 
 Add to _webpack.config.js_.
 
-```js
-plugins: [ 
-  new CopyWebpackPlugin([ 
+```js{4,5}
+plugins: [
+  new CopyWebpackPlugin([
     {
       from: path.resolve(__dirname, '../docs/_book'),
       to: config.dev.assetsSubDirectory + '/docs',

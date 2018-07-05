@@ -4,6 +4,9 @@ module.exports = {
   description: "A personal collection of my how to's",
   port: 2511,
   serviceWorker: true,
+  markdown: {
+    lineNumbers: true
+  },
   themeConfig: {
     nav: [
       {

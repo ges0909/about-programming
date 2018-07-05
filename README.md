@@ -1,9 +1,8 @@
 ---
 title: How to
 home: true
-heroImage: /hero.jpg
+# heroImage: /hero.jpg
 lang: en-US
-sidebar: true
 actionText: Get Started →
 actionLink: /vuepress/
 features:
