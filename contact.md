@@ -1,8 +1,9 @@
 ---
-title: Contact
+title: Vuepress
+sidebar: auto
 lang: en-US
 ---
-# Contact
+Enforce line breaks with 2 spaces at the end of line.
 
 Max Mustermann  
 12345 Berlin  

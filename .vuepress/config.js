@@ -1,18 +1,31 @@
 module.exports = {
-  title: 'VuePress Doc Pipeline',
-  description: 'Proof of Concept for a document pipeline using VuePress and Pandoc.',
+  title: "How to",
+  description: "A personal collection of my how to's",
   port: 2511,
+  serviceWorker: true,
   themeConfig: {
-    sidebar: [
-      '/',
-      '/src/1-images',
-      '/src/2-components',
-      '/src/3-templates',
-      '/src/4-containers',
-      '/src/8-node',
-      '/src/contact',
-      '/src/about'
+    nav: [
+      {
+        text: 'Home',
+        link: '/'
+      },
+      {
+        text: 'JS',
+        items: [
+          { text: 'Vuepress', link: '/vuepress/' },
+          { text: 'Node', link: '/node/' },
+          { text: 'Yarn/Npm', link: '/yarn_npm/' },
+          { text: 'Gitbook', link: '/gitbook/' }
+        ]
+      },
+      {
+        text: 'Java',
+        items: [
+          { text: 'Date/Time', link: '/date_time/' },
+          { text: 'Streams', link: '/streams/' }
+        ]
+      }
     ],
-    sidebarDepth: 0
+    sidebarDepth: 1
   }
 };
