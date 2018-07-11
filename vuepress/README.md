@@ -5,6 +5,8 @@ lang: en-US
 # prev: /
 # next: /node/
 ---
+<!-- markdownlint-disable MD033 -->
+
 # Vuepress
 
 Where to start?
@@ -22,26 +24,22 @@ install [yarn](https://yarnpkg.com/lang/en/) as alternative to
 
 ## New project
 
-* install _vuepress_ globally
+* install _Vuepress_
 
 ```bash
-npm install -g vuepress
-# or
+# package.json will be created if not exist
 yarn global add vuepress
+# or for netlify deploy
+yarn add vuepress --dev
 ```
 
 * create a project folder and navigate to it
 * create a file _README.md_ and edit it
-* starts a web server with live reloading and deploys your assets to it
 
 ```bash
+# start web server with live reloading and browse to http://localhost:8080
 vuepress dev
-```
-
-* browse to [http://localhost:8080](http://localhost:8080)
-* build to static files and stores your minified assets in `.vuepress/dist`
-
-```bash
+# build and store minified assets in `.vuepress/dist`
 vuepress build
 ```
 
@@ -129,6 +127,60 @@ This is a warning
 This is a dangerous warning
 :::
 
+## Loader
+
+```bash
+yarn add sass-loader node-sass --dev
+```
+
+## Other modules
+
+### Vue Cute Timeline
+
+```bash
+yarn add vue-cute-timeline
+```
+
+Register component in file `.vuepress/enhance.App.js`.
+
+```js
+import { Timeline, TimelineItem, TimelineTitle } from 'vue-cute-timeline';
+
+export default ({
+  Vue, // the version of Vue being used in the VuePress app
+  options, // the options for the root Vue instance
+  router, // the router instance for the app
+  siteData // site metadata
+}) => {
+  Vue.component('Timeline', Timeline);
+  Vue.component('TimelineItem', TimelineItem);
+  Vue.component('TimelineTitle', TimelineTitle);
+};
+```
+
+### Framework 7
+
+```bash
+yarn add framework7
+yarn add framework7-vue
+```
+
+## Custom theme
+
+```bash
+yarn vuepress eject
+```
+
+```bash
+cd .vuepress
+yarn add quasar
+```
+
+See more:
+
+* [How to create a custom VuePress theme with Vuetify](https://medium.com/vue-mastery/how-to-create-a-custom-vuepress-theme-with-vuetify-651b7d7e5092)
+* [Custom theme](https://vuepress.vuejs.org/guide/custom-themes.html#site-and-page-metadata)
+
 ## Netlify
 
 Add _vuepress_ as local dependency.
@@ -155,6 +207,6 @@ Configure deploy settings on [netlify](https://www.netlify.com/).
 
 | Deploy settings   |                  |
 | ----------------- | ---------------- |
-| Build command     | `yarn build`  |
+| Build command     | `yarn build`     |
 | Publish directory | `.vuepress/dist` |
 | Production branch | `develop`        |

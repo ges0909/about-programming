@@ -1,0 +1,8 @@
+{
+  "materialTheme.fixIconsRunning": false,
+  "workbench.colorTheme": "Material Theme",
+  "workbench.iconTheme": "eq-material-theme-icons",
+  "workbench.colorCustomizations": {
+    "terminal.background": "#494949"
+  }
+}

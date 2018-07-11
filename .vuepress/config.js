@@ -16,6 +16,7 @@ module.exports = {
       {
         text: 'JS',
         items: [
+          { text: 'Vue', link: '/vue/' },
           { text: 'Vuepress', link: '/vuepress/' },
           { text: 'Node', link: '/node/' },
           { text: 'Yarn/Npm', link: '/yarn_npm/' }

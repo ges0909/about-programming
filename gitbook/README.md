@@ -5,6 +5,8 @@ lang: en-US
 ---
 # Gitbook
 
+## Init project
+
 ```bash
 # install gitbook cli
 yarn add gitbook-cli --dev
@@ -20,7 +22,10 @@ yarn gitbook build --debug
 yarn http-server _book 
 ```
 
-See more [Gitbook Toolchain](https://toolchain.gitbook.com/) and [http-server](https://github.com/indexzero/http-server)
+See more:
+
+* [Gitbook Toolchain](https://toolchain.gitbook.com/)
+* [http-server](https://github.com/indexzero/http-server)
 
 ## Pdf
 
