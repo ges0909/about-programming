@@ -3,10 +3,6 @@ module.exports = {
   title: "How to",
   description: "A personal collection of my how to's",
   port: 2511,
-  serviceWorker: true,
-  markdown: {
-    lineNumbers: true
-  },
   themeConfig: {
     nav: [
       {
@@ -18,8 +14,7 @@ module.exports = {
         items: [
           { text: 'Vue', link: '/vue/' },
           { text: 'Vuepress', link: '/vuepress/' },
-          { text: 'Node', link: '/node/' },
-          { text: 'Yarn/Npm', link: '/yarn_npm/' }
+          { text: 'Node + Yarn + Npm', link: '/node_npm_yarn/' }
         ]
       },
       {

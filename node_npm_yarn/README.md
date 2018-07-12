@@ -39,3 +39,4 @@ yarn global upgrade vuepress
 | `yarn global remove vuepress` |                           |
 | `yarn autoclean --force`      |                           |
 | `yarn cache clean`            |                           |
+|                               | `npm list -g`             |

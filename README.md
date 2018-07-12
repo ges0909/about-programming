@@ -1,7 +1,7 @@
 ---
 title: How to
 home: true
-# heroImage: /hero.jpg
+heroImage: /logo.png
 lang: en-US
 actionText: Get Started →
 actionLink: /vuepress/

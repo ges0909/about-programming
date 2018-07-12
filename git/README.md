@@ -3,6 +3,8 @@ title: Git
 sidebar: auto
 lang: en-US
 ---
+<!-- markdownlint-disable MD033 -->
+
 # Git
 
 ## Init repo

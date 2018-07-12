@@ -5,18 +5,18 @@ lang: en-US
 ---
 # Vue
 
-Read [The Vue Handbook: a thorough introduction to Vue.js](https://medium.freecodecamp.org/the-vue-handbook-a-thorough-introduction-to-vue-js-1e86835d8446).
+* see [The Vue Handbook: a thorough introduction to Vue.js](https://medium.freecodecamp.org/the-vue-handbook-a-thorough-introduction-to-vue-js-1e86835d8446)
 
-## Install Vue CLI
+## Vue cli
 
-Read [Vue CLI 3 — the deep dive](https://blog.logrocket.com/vue-cli-3-the-deep-dive-41dff070ac4a)!
+* see [Vue CLI 3 — the deep dive](https://blog.logrocket.com/vue-cli-3-the-deep-dive-41dff070ac4a)
 
 ```bash
 # install vue cli (version 3)
 yarn global add @vue/cli
 # test installation
 vue -V
-# create new project
+# create new project => !!! initial setup is comitted on 'master' !!!
 vue create <project name>
 # or create with presets stored in ~/.vue
 vue create -p <preset name> <project name>
@@ -42,7 +42,7 @@ vue build <file name>
 
 ## Components
 
-### Root
+Root:
 
 ```js
 new Vue({
@@ -50,7 +50,7 @@ new Vue({
 })
 ```
 
-### Global
+Global:
 
 Components created using `Vue.component()` is globally registered and may used
 from anywhere in the application.
@@ -66,7 +66,7 @@ Vue.component('component-name', {
 })
 ```
 
-### Local
+Local:
 
 ```js
 const Sidebar = {
@@ -81,6 +81,6 @@ new Vue({
 })
 ```
 
-### Single File
+Single File:
 
 `.vue` files cannot be used without a Webpack setup.
