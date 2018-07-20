@@ -10,7 +10,7 @@ module.exports = {
         link: '/'
       },
       {
-        text: 'JS',
+        text: 'Js',
         items: [
           { text: 'Vue', link: '/vue/' },
           { text: 'Vuepress', link: '/vuepress/' },
@@ -25,10 +25,11 @@ module.exports = {
         ]
       },
       {
-        text: 'Git',
+        text: 'Tools',
         items: [
           { text: 'Git', link: '/git/' },
-          { text: 'Gitbook', link: '/gitbook/' }
+          { text: 'Gitbook', link: '/gitbook/' },
+          { text: 'JHipster', link: '/jhipster/' }
         ]
       }
     ],
