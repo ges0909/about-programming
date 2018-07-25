@@ -1,6 +1,6 @@
 module.exports = {
   base: '/',
-  title: "How to",
+  title: 'How to',
   description: "A personal collection of my how to's",
   port: 2511,
   themeConfig: {
@@ -19,17 +19,15 @@ module.exports = {
       },
       {
         text: 'Java',
-        items: [
-          { text: 'Date/Time', link: '/date_time/' },
-          { text: 'Streams', link: '/streams/' }
-        ]
+        items: [ { text: 'Date/Time', link: '/date_time/' }, { text: 'Streams', link: '/streams/' } ]
       },
       {
         text: 'Tools',
         items: [
           { text: 'Git', link: '/git/' },
           { text: 'Gitbook', link: '/gitbook/' },
-          { text: 'JHipster', link: '/jhipster/' }
+          { text: 'JHipster', link: '/jhipster/' },
+          { text: 'IntelliJ', link: '/intellij/' }
         ]
       }
     ],
