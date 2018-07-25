@@ -27,7 +27,8 @@ module.exports = {
           { text: 'Git', link: '/git/' },
           { text: 'Gitbook', link: '/gitbook/' },
           { text: 'JHipster', link: '/jhipster/' },
-          { text: 'IntelliJ', link: '/intellij/' }
+          { text: 'IntelliJ', link: '/intellij/' },
+          { text: 'PowerShell', link: '/powershell/' }
         ]
       }
     ],
