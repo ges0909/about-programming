@@ -47,7 +47,7 @@ git remote add origin https://github.com/ges0909/spring-demo.git
 
 1. If available edit `.git/description` to change the display name.
 2. Rename local repo folder with `mv <from> <to>` <sup>1</sup>.
-3. Change remote URL with `git remote set-url origin https://github.com/ges0909/spring-demo.git`.
+3. Change remote URL with `git remote set-url origin git@github.com:ges0909/howto.git`.
 4. Rename project on remote (see `Settings` on [Github](https://github.com/)).
 
   ::: tip
