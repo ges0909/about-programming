@@ -8,7 +8,7 @@ lang: en-US
 Prerequisites:
 
 * JDK 8
-* Node.js
+* Node.js/npm
 * Yarn
 
 Then:
@@ -20,7 +20,11 @@ yarn global add generator-jhipster
 
 ## Create app
 
-```bash
+Don't use `git-bash` because it has problems with cursor control making it difficult to configure your app with _jhipster_ properly.
+
+Instead use `powershell`.
+
+```powershell
 mkdir jhipster-demo && cd jhipster-demo
 jhipster
 ```

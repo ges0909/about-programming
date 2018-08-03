@@ -7,6 +7,13 @@ lang: en-US
 
 # Git
 
+## Config git
+
+```bash
+git config --global user.name "Gerrit Schrader"
+git config --global user.email gerrit.schrader@example.com
+```
+
 ## Init repo
 
 ```bash
