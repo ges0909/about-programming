@@ -51,7 +51,7 @@ git remote add origin https://github.com/ges0909/spring-demo.git
 4. Rename project on remote (see `Settings` on [Github](https://github.com/)).
 
   ::: tip
-  Take care about the right git protocol `git` or `https`.
+  Take care about the right git protocol `git` (may be also `ssh`) or `https`.
   :::
 
 <span style="font-size:smaller">[1]: `<..>` denotes placeholders</span>
