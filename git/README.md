@@ -10,11 +10,23 @@ lang: en-US
 ## Init repo
 
 ```bash
+  mkdir project && cd project
   git init
   git remote add origin https://github.com/ges0909/<project>.git
   git add .
   git commit -a -m "initial commit"
   git push -u origin --all
+```
+
+## Gitflow
+
+See [git-flow cheatsheet](https://danielkummer.github.io/git-flow-cheatsheet/).
+
+[Sourcetree](https://www.sourcetreeapp.com/) has built-in _git-flow_ support.
+
+```bash
+mkdir project && cd project
+git flow init
 ```
 
 ## Branching
@@ -31,7 +43,7 @@ git remote rm origin
 git remote add origin https://github.com/ges0909/spring-demo.git
 ```
 
-## Rename repo
+## Repo renaming
 
 1. If available edit `.git/description` to change the display name.
 2. Rename local repo folder with `mv <from> <to>` <sup>1</sup>.
