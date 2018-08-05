@@ -5,6 +5,10 @@ lang: en-US
 ---
 # JHipster
 
+::: tip
+Don't use `git-bash` for [JHipster](https://www.jhipster.tech/) console commands because it has some problems with cursor control making it difficult to configure your application properly. Instead try [Cmder](http://cmder.net/).
+:::
+
 Before you start read [The JHipster Mini-Book](https://www.infoq.com/minibooks/jhipster-4x-mini-book).
 
 ## Installation
@@ -21,12 +25,6 @@ Install:
 yarn global add yo # install 'yeoman' globally
 yarn global add generator-jhipster
 ```
-
----
-
-::: tip
-Don't use `git-bash` for [JHipster](https://www.jhipster.tech/) because it has some problems with cursor control making it difficult to configure your application properly. Instead try [Cmder](http://cmder.net/).
-:::
 
 ## Monolith application
 
@@ -62,7 +60,7 @@ cd jhipster-microservice-demo
 mkdir consolidator
 cd consolidator
 jhipster
-# ... Microservice application, de.infinitservices.forge.serviceplatform, No service discovery, No database, Gradle
+# > ... Microservice application, de.infinitservices.forge.serviceplatform, No service discovery, No database, Gradle
 gradlew
 ```
 
@@ -75,9 +73,11 @@ cd ../
 mkdir gateway
 cd gateway/
 jhipster
-... Microservice gateway, No service discovery, Gradle
+# > ... Microservice gateway, No service discovery, Gradle
+
 # build back-end
 gradlew
+
 # build front-end
 yarn start
 ```
@@ -87,16 +87,21 @@ yarn start
 ```bash
 cd ../consolidator
 gradlew -Pprod bootWar buildDocker
+
 cd ../gateway
 gradlew -Pprod bootWar buildDocker
+
 cd ../
 mkdir docker
 cd docker/
 jhipster docker-compose
-# ... Microservice application, JHipster gateway based on Netflix Zuul
-docker-compose up
+# > ... Microservice application, JHipster gateway based on Netflix Zuul
 ```
 
----
+Run all services.
+
+```bash
+docker-compose up
+```
 
 Gateway is reachable now on `http://localhost:8080`.
