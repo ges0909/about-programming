@@ -22,23 +22,26 @@ yarn global add yo # install 'yeoman' globally
 yarn global add generator-jhipster
 ```
 
-## Monolithic application
+---
 
 ::: warning
-Don't use `git-bash` because it has problems with cursor control making it difficult to configure your app with _jhipster_ properly. Instead use [Cmder](http://cmder.net/).
+Don't use `git-bash` for [JHipster](https://www.jhipster.tech/) because it has some problems with cursor control making it difficult to configure your application properly. Instead try [Cmder](http://cmder.net/).
 :::
 
+## Monolith application
 
 ```cmd
-mkdir jhipster-app-demo
-cd jhipster-app-demo
-jhipster # scaffold monolith
-./gradlew
+mkdir jhipster-monolith-demo
+cd jhipster-monolith-demo
+jhipster
+gradlew
 ```
 
-## Microservices
+## Microservice
 
 Read [Building A Simple Microservice With JHipster In 20 Minutes](http://blog.avenuecode.com/building-a-microservice-in-20-minutes-with-jhipster).
+
+---
 
 ::: warning
 _Docker_ must be running and TLS must be disabled (_Settings_ > _General_ > _Expose daemon ... without TLS_).
@@ -51,7 +54,7 @@ mkdir jhipster-microservice-demo
 cd jhipster-microservice-demo
 ```
 
-### Create a microservice
+### Create microservice
 
 ```bash
 mkdir consolidator
@@ -61,7 +64,7 @@ jhipster
 gradlew
 ```
 
-### Create a gateway
+### Create gateway
 
 ... with Admin UI, Account database, etc.
 
@@ -92,5 +95,6 @@ jhipster docker-compose
 docker-compose up
 ```
 
-Gateway is reachable now on `http://localhost:8080`.
+---
 
+Gateway is reachable now on `http://localhost:8080`.
