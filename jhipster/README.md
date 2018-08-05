@@ -33,11 +33,10 @@ JHipster knows two types of projects: _Monolithic_- and _Microservice applicatio
 ### Monolithic
 
 ```bash
-mkdir jhipster-monolith-demo
-cd jhipster-monolith-demo
+mkdir jhipster-monolithic-demo
+cd jhipster-monolithic-demo
 jhipster
 # > Monolithic application, JWT authentication, SQL, MySQL, Angular 6
-gradlew
 
 # build back-end
 gradlew
