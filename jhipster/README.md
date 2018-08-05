@@ -24,7 +24,7 @@ yarn global add generator-jhipster
 
 ---
 
-::: warning
+::: tip
 Don't use `git-bash` for [JHipster](https://www.jhipster.tech/) because it has some problems with cursor control making it difficult to configure your application properly. Instead try [Cmder](http://cmder.net/).
 :::
 
@@ -43,9 +43,11 @@ Read [Building A Simple Microservice With JHipster In 20 Minutes](http://blog.av
 
 ---
 
-::: warning
+::: tip
 _Docker_ must be running and TLS must be disabled (_Settings_ > _General_ > _Expose daemon ... without TLS_).
 :::
+
+---
 
 ### Create project folder
 
