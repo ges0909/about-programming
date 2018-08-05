@@ -5,11 +5,11 @@ lang: en-US
 ---
 # JHipster
 
+Before you start read [The JHipster Mini-Book](https://www.infoq.com/minibooks/jhipster-4x-mini-book).
+
 ::: tip
 Don't use `git-bash` for [JHipster](https://www.jhipster.tech/) console commands because it has some problems with cursor control making it difficult to configure your application properly. Instead try [Cmder](http://cmder.net/).
 :::
-
-Before you start read [The JHipster Mini-Book](https://www.infoq.com/minibooks/jhipster-4x-mini-book).
 
 ## Installation
 
