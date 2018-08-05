@@ -22,11 +22,12 @@ yarn global add yo # install 'yeoman' globally
 yarn global add generator-jhipster
 ```
 
-## Create a (monolithic) app
+## Monolithic application
 
-Don't use `git-bash` because it has problems with cursor control making it difficult to configure your app with _jhipster_ properly.
+::: warning
+Don't use `git-bash` because it has problems with cursor control making it difficult to configure your app with _jhipster_ properly. Instead use [Cmder](http://cmder.net/).
+:::
 
-Instead use [Cmder](http://cmder.net/).
 
 ```cmd
 mkdir jhipster-app-demo
@@ -35,36 +36,50 @@ jhipster # scaffold monolith
 ./gradlew
 ```
 
-## Create a microservice
+## Microservices
 
 Read [Building A Simple Microservice With JHipster In 20 Minutes](http://blog.avenuecode.com/building-a-microservice-in-20-minutes-with-jhipster).
 
+::: warning
 _Docker_ must be running and TLS must be disabled (_Settings_ > _General_ > _Expose daemon ... without TLS_).
+:::
 
-```cmd
-# 1. create project folder
+### Create project folder
+
+```bash
 mkdir jhipster-microservice-demo
 cd jhipster-microservice-demo
+```
 
-# 2. create microservice with any business logic
+### Create a microservice
+
+```bash
 mkdir consolidator
 cd consolidator
 jhipster
 # ... Microservice application, de.infinitservices.forge.serviceplatform, No service discovery, No database, Gradle
 gradlew
+```
 
-# 3. create gateway (Admin UI, Account database, ...)
+### Create a gateway
+
+... with Admin UI, Account database, etc.
+
+```bash
 cd ../
 mkdir gateway
 cd gateway/
 jhipster
 ... Microservice gateway, No service discovery, Gradle
-# buold back-end
+# build back-end
 gradlew
 # build front-end
 yarn start
+```
 
-# docker-compose
+### Docker
+
+```bash
 cd ../consolidator
 gradlew -Pprod bootWar buildDocker
 cd ../gateway
@@ -75,7 +90,7 @@ cd docker/
 jhipster docker-compose
 # ... Microservice application, JHipster gateway based on Netflix Zuul
 docker-compose up
-
-# gateway access
-http://localhost:8080
 ```
+
+Gateway is reachable now on `http://localhost:8080`.
+
