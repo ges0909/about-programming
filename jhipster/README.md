@@ -100,7 +100,7 @@ jhipster docker-compose
 # > ... Microservice application, JHipster gateway based on Netflix Zuul
 ```
 
-Run all services.
+Run all services incl. database.
 
 ```bash
 docker-compose up
