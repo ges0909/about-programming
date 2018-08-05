@@ -26,15 +26,30 @@ yarn global add yo # install 'yeoman' globally
 yarn global add generator-jhipster
 ```
 
-## JHipster scaffolding
+## Project scaffolding with JHipster
 
-### Monolith
+JHipster knows two types of projects: _Monolithic_- and _Microservice applications_.
+
+### Monolithic
 
 ```bash
 mkdir jhipster-monolith-demo
 cd jhipster-monolith-demo
 jhipster
+# > Monolithic application, JWT authentication, SQL, MySQL, Angular 6
 gradlew
+
+# build back-end
+gradlew
+
+# build front-end
+yarn start
+
+gradlew -Pprod bootWar buildDocker
+
+mkdir docker
+cd docker/
+jhipster docker-compose
 ```
 
 ### Microservice
@@ -44,7 +59,7 @@ Read [Building A Simple Microservice With JHipster In 20 Minutes](http://blog.av
 ---
 
 ::: tip
-_Docker_ must be running and TLS must be disabled (_Settings_ > _General_ > _Expose daemon ... without TLS_).
+_Docker_ must be running and TLS must be **disabled** (_Settings_ > _General_ > _Expose daemon ... without TLS_).
 :::
 
 ---
