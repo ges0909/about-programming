@@ -26,16 +26,18 @@ yarn global add yo # install 'yeoman' globally
 yarn global add generator-jhipster
 ```
 
-## Monolith application
+## JHipster scaffolding
 
-```cmd
+### Monolith
+
+```bash
 mkdir jhipster-monolith-demo
 cd jhipster-monolith-demo
 jhipster
 gradlew
 ```
 
-## Microservice
+### Microservice
 
 Read [Building A Simple Microservice With JHipster In 20 Minutes](http://blog.avenuecode.com/building-a-microservice-in-20-minutes-with-jhipster).
 
@@ -47,14 +49,14 @@ _Docker_ must be running and TLS must be disabled (_Settings_ > _General_ > _Exp
 
 ---
 
-### Create project folder
+#### Create project folder
 
 ```bash
 mkdir jhipster-microservice-demo
 cd jhipster-microservice-demo
 ```
 
-### Create microservice
+#### Create microservice
 
 ```bash
 mkdir consolidator
@@ -64,7 +66,7 @@ jhipster
 gradlew
 ```
 
-### Create gateway
+#### Create gateway
 
 ... with Admin UI, Account database, etc.
 
@@ -82,7 +84,7 @@ gradlew
 yarn start
 ```
 
-### Docker
+#### Docker
 
 ```bash
 cd ../consolidator
