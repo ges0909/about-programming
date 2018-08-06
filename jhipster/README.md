@@ -33,22 +33,27 @@ JHipster knows two types of projects: _Monolithic_- and _Microservice applicatio
 ### Monolithic
 
 ```bash
-mkdir jhipster-monolithic-demo
-cd jhipster-monolithic-demo
+mkdir jhipster-monolithic-demo && cd jhipster-monolithic-demo
+
 jhipster
-# > Monolithic application, JWT authentication, SQL, MySQL, Angular 6
+# ... Monolithic application, JWT authentication, SQL, MySQL, Angular 6
+# ...
+
+git flow init
 
 # build back-end
 gradlew
-
 # build front-end
 yarn start
 
+# build docker image
 gradlew -Pprod bootWar buildDocker
 
 mkdir docker
 cd docker/
 jhipster docker-compose
+
+docker-compose
 ```
 
 ### Microservice
@@ -66,39 +71,46 @@ _Docker_ must be running and TLS must be **disabled** (_Settings_ > _General_ > 
 #### Create project folder
 
 ```bash
-mkdir jhipster-microservice-demo
-cd jhipster-microservice-demo
+mkdir jhipster-microservice-demo && cd jhipster-microservice-demo
 ```
 
-#### Create microservice
+#### Microservice
 
 ```bash
-mkdir consolidator
-cd consolidator
+mkdir consolidator && cd consolidator
+
 jhipster
-# > ... Microservice application, de.infinitservices.forge.serviceplatform, No service discovery, No database, Gradle
+# ... Microservice application, consolidator, de.infinitservices.forge.serviceplatform, No service discovery, JWT, No database, Gradle
+# ...
+
+git flow init
+
 gradlew
 ```
 
-#### Create gateway
+#### Gateway
 
 ... with Admin UI, Account database, etc.
 
 ```bash
 cd ../
-mkdir gateway
-cd gateway/
+mkdir gateway && cd gateway
+
 jhipster
-# > ... Microservice gateway, No service discovery, Gradle
+# ... Microservice gateway, No service discovery, JWT, SQL, PostgreSQL, H2 with disk-based persistence, No cache (!), Gradle
+# ...
+
+git flow init
 
 # build back-end
 gradlew
-
 # build front-end
 yarn start
 ```
 
 #### Docker
+
+Containerization is prepared only for _prod_ profiles.
 
 ```bash
 cd ../consolidator
@@ -108,16 +120,21 @@ cd ../gateway
 gradlew -Pprod bootWar buildDocker
 
 cd ../
-mkdir docker
-cd docker/
+mkdir docker && cd docker/
+
 jhipster docker-compose
-# > ... Microservice application, JHipster gateway based on Netflix Zuul
+# ... Microservice application, JHipster gateway based on Netflix Zuul
+# ...
 ```
 
-Run all services incl. database.
+Run all services database.
 
 ```bash
 docker-compose up
 ```
 
 Gateway is reachable now on `http://localhost:8080`.
+
+### Tips
+
+* IntelliJ: Load generated project with **_File_ > _Open_** to avoid trouble with _Spring_ annotation processing.
