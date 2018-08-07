@@ -74,9 +74,21 @@ _Docker_ must be running and TLS must be **disabled** (_Settings_ > _General_ > 
 mkdir jhipster-microservice-demo && cd jhipster-microservice-demo
 ```
 
-#### Microservice
+### Registry
+
+Download `war` from [here](https://github.com/jhipster/jhipster-registry/releases).
 
 ```bash
+mkdir registry
+java -jar jhipster-registry-4.0.0.war
+```
+
+Navigate to `http://localhost:8761`.
+
+#### Service
+
+```bash
+cd ..
 mkdir consolidator && cd consolidator
 
 jhipster
@@ -93,7 +105,7 @@ gradlew
 ... with Admin UI, Account database, etc.
 
 ```bash
-cd ../
+cd ..
 mkdir gateway && cd gateway
 
 jhipster
@@ -119,7 +131,7 @@ gradlew -Pprod bootWar buildDocker
 cd ../gateway
 gradlew -Pprod bootWar buildDocker
 
-cd ../
+cd ..
 mkdir docker && cd docker/
 
 jhipster docker-compose
@@ -135,6 +147,27 @@ docker-compose up
 
 Gateway is reachable now on `http://localhost:8080`.
 
+### Upgrade
+
+See [Upgrading an application](https://www.jhipster.tech/upgrading-an-application/).
+
 ### Tips
 
 * IntelliJ: Load generated project with **_File_ > _Open_** to avoid trouble with _Spring_ annotation processing.
+
+### Test
+
+```http
+POST http://localhost:8080/api/authenticate
+Content-Type: application/json
+Accept: application/json
+
+{ "password": "admin", "rememberMe": true, "username": "admin" }
+```
+
+```http
+GET http://localhost:8080/consolidator/echo?value=Hallo
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImF1dGgiOiJST0xFX0FETUlOLFJPTEVfVVNFUiIsImV4cCI6MTUzNjIxMDE5N30.7lUSdI49QwIlhWLsoQTJBamuQOakidEJY3lvbSEkbWK5HU1sUmMJeWNLi5VuIodq2GO_GcsxhPFunGCPVOWthw
+```
