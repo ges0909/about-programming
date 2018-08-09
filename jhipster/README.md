@@ -74,7 +74,7 @@ _Docker_ must be running and TLS must be **disabled** (_Settings_ > _General_ > 
 mkdir jhipster-microservice-demo && cd jhipster-microservice-demo
 ```
 
-### Registry
+#### 1. Build registry
 
 Download `war` from [here](https://github.com/jhipster/jhipster-registry/releases).
 
@@ -85,7 +85,25 @@ java -jar jhipster-registry-4.0.0.war
 
 Navigate to `http://localhost:8761`.
 
-#### Service
+#### 2. Build gateway
+
+... with Admin UI, Account database, etc.
+
+```bash
+cd ..
+mkdir gateway && cd gateway
+
+jhipster
+# ... Microservice gateway, No service discovery, JWT, SQL, PostgreSQL, H2 with disk-based persistence, No cache (!), Gradle
+# ...
+
+# build back-end
+gradlew
+# build front-end
+yarn start
+```
+
+#### 3. Build your microservice
 
 ```bash
 cd ..
@@ -100,27 +118,7 @@ git flow init
 gradlew
 ```
 
-#### Gateway
-
-... with Admin UI, Account database, etc.
-
-```bash
-cd ..
-mkdir gateway && cd gateway
-
-jhipster
-# ... Microservice gateway, No service discovery, JWT, SQL, PostgreSQL, H2 with disk-based persistence, No cache (!), Gradle
-# ...
-
-git flow init
-
-# build back-end
-gradlew
-# build front-end
-yarn start
-```
-
-#### Docker
+### Containerization with docker
 
 Containerization is prepared only for _prod_ profiles.
 
