@@ -132,10 +132,10 @@ Containerization is prepared only for _prod_ profiles.
 
 ```bash
 cd ../consolidator
-gradlew -Pprod bootWar buildDocker
+gradlew -Pprod clean bootWar buildDocker
 
 cd ../gateway
-gradlew -Pprod bootWar buildDocker
+gradlew -Pprod clean bootWar buildDocker
 
 cd ..
 mkdir docker && cd docker/
