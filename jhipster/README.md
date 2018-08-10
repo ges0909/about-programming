@@ -118,6 +118,14 @@ git flow init
 gradlew
 ```
 
+To avoid Eureka discovery procedure at startup add to `application-dev.yml`:
+
+```yaml
+eureka:
+    client:
+        enabled: false
+```
+
 ### Containerization with docker
 
 Containerization is prepared only for _prod_ profiles.

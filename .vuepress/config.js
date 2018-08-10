@@ -19,7 +19,11 @@ module.exports = {
       },
       {
         text: 'Java',
-        items: [ { text: 'Date/Time', link: '/date_time/' }, { text: 'Streams', link: '/streams/' } ]
+        items: [
+          { text: 'Gradle', link: '/gradle/' },
+          { text: 'Date/Time', link: '/date_time/' },
+          { text: 'Streams', link: '/streams/' }
+        ]
       },
       {
         text: 'Tools',
