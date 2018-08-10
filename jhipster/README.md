@@ -103,6 +103,14 @@ gradlew
 yarn start
 ```
 
+"_At this point, it’s a good idea to check your project into Git so you can easily see what changes are made going forward._" ([here](https://developer.okta.com/blog/2017/06/20/develop-microservices-with-jhipster))
+
+```bash
+git init
+git add .
+git commit -m "Gateway created"
+```
+
 #### 3. Build your microservice
 
 ```bash
