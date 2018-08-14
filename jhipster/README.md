@@ -137,7 +137,7 @@ eureka:
 
 ### Containerization with docker
 
-Containerization is prepared only for _prod_ profiles.
+Containerization seems to be prepared for _prod_ profiles only.
 
 ```bash
 cd ../consolidator
@@ -166,23 +166,6 @@ Gateway is reachable now on `http://localhost:8080`.
 
 See [Upgrading an application](https://www.jhipster.tech/upgrading-an-application/).
 
-### Tips
+### IntelliJ
 
-* IntelliJ: Load generated project with **_File_ > _Open_** to avoid trouble with _Spring_ annotation processing.
-
-### Test
-
-```http
-POST http://localhost:8080/api/authenticate
-Content-Type: application/json
-Accept: application/json
-
-{ "password": "admin", "rememberMe": true, "username": "admin" }
-```
-
-```http
-GET http://localhost:8080/consolidator/echo?value=Hallo
-Content-Type: application/json
-Accept: application/json
-Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImF1dGgiOiJST0xFX0FETUlOLFJPTEVfVVNFUiIsImV4cCI6MTUzNjIxMDE5N30.7lUSdI49QwIlhWLsoQTJBamuQOakidEJY3lvbSEkbWK5HU1sUmMJeWNLi5VuIodq2GO_GcsxhPFunGCPVOWthw
-```
+Load generated project with **_File_ > _Open_** to avoid trouble with _Spring_ annotation processing.
