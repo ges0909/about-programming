@@ -27,6 +27,12 @@ yarn global add yo # install 'yeoman' globally
 yarn global add generator-jhipster
 ```
 
+Upgrade:
+
+```bash
+yarn global upgrade generator-jhipster
+```
+
 ## Project scaffolding with JHipster
 
 JHipster knows two types of projects: _Monolithic_- and _Microservice applications_.
@@ -162,7 +168,7 @@ docker-compose up
 
 Gateway is reachable now on `http://localhost:8080`.
 
-### Upgrade
+### Upgrade application
 
 See [Upgrading an application](https://www.jhipster.tech/upgrading-an-application/).
 
