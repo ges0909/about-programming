@@ -1,5 +1,5 @@
 ---
-title: How to
+title: How-to
 home: true
 heroImage: /logo.png
 lang: en-US

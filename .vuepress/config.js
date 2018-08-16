@@ -1,7 +1,7 @@
 module.exports = {
   base: '/',
-  title: 'How to',
-  description: "A personal collection of my how to's",
+  title: 'How-to',
+  description: "A personal collection of how-to's",
   port: 2511,
   themeConfig: {
     nav: [
@@ -22,7 +22,8 @@ module.exports = {
         items: [
           { text: 'Gradle', link: '/gradle/' },
           { text: 'Date/Time', link: '/date_time/' },
-          { text: 'Streams', link: '/streams/' }
+          { text: 'Streams', link: '/streams/' },
+          { text: 'Testing', link: '/testing/' }
         ]
       },
       {
