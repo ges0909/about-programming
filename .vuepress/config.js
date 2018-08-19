@@ -23,7 +23,7 @@ module.exports = {
           { text: 'Gradle', link: '/gradle/' },
           { text: 'Date/Time', link: '/date_time/' },
           { text: 'Streams', link: '/streams/' },
-          { text: 'Testing', link: '/testing/' }
+          { text: 'Unit-Test', link: '/unittest/' }
         ]
       },
       {
@@ -32,7 +32,7 @@ module.exports = {
           { text: 'Git', link: '/git/' },
           { text: 'Gitbook', link: '/gitbook/' },
           { text: 'JHipster', link: '/jhipster/' },
-          { text: 'IntelliJ', link: '/intellij/' },
+          { text: 'Docker', link: '/docker/' },
           { text: 'PowerShell', link: '/powershell/' }
         ]
       }

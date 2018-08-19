@@ -8,7 +8,7 @@ lang: en-US
 Before you start read [The JHipster Mini-Book](https://www.infoq.com/minibooks/jhipster-4x-mini-book).
 
 ::: tip
-Don't use `git-bash` for [JHipster](https://www.jhipster.tech/) console commands because it has some problems with cursor control making it difficult to configure your application properly. Instead try [Cmder](http://cmder.net/).
+Don't use `git-bash` for [JHipster](https://www.jhipster.tech/) console commands because it has some problems with cursor control making it difficult to configure your application properly. Instead donwload [Cmder](http://cmder.net/) and execute `.\cmder.exe /REGISTER ALL` as administrator.
 :::
 
 ## Installation
@@ -141,32 +141,44 @@ eureka:
         enabled: false
 ```
 
-### Containerization with docker
+#### 4. Development database
 
-Containerization seems to be prepared for _prod_ profiles only.
+```docker
+docker-compose -f src/main/docker/mariadb.yml up [ --detach ]
+docker-compose -f src/main/docker/mariadb.yml stop
+```
+
+### Docker
+
+#### Building and running a Docker image
+
+To create a Docker image of your application, and push it into your Docker registry:
 
 ```bash
 cd ../consolidator
-gradlew -Pprod clean bootWar buildDocker
-
-cd ../gateway
-gradlew -Pprod clean bootWar buildDocker
-
-cd ..
-mkdir docker && cd docker/
-
-jhipster docker-compose
-# ... Microservice application, JHipster gateway based on Netflix Zuul
-# ...
+gradlew clean bootWar -Pprod buildDocker
 ```
 
-Run all services database.
+To run this image, use the Docker Compose configuration located in the `src/main/docker` folder of your application:
+
+```bash
+docker-compose -f src/main/docker/app.yml up
+```
+
+The same applies to the `gateway`. It is reachable now on `http://localhost:8080`.
+
+#### Generating a custom Docker-Compose configuration for multiple applications
+
+```bash
+mkdir docker-compose && cd docker-compose
+jhipster docker-compose
+```
+
+Run all services including database(s).
 
 ```bash
 docker-compose up
 ```
-
-Gateway is reachable now on `http://localhost:8080`.
 
 ### Upgrade application
 
