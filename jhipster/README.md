@@ -150,7 +150,6 @@ docker-compose -f src/main/docker/mariadb.yml stop
 
 #### 5. Create an entity
 
-
 Define your entity model with [JDL-Studio](https://start.jhipster.tech/jdl-studio/).
 
 Download `jhipster-jdl.jh`, copy it to your project folder and rename it.
@@ -159,6 +158,7 @@ Download `jhipster-jdl.jh`, copy it to your project folder and rename it.
 cd normality-generator
 mv jhipster-jdl.jh normality.jdl
 jhipster import-jdl normality.jdl [ --force ]
+```
 
 ### Docker
 
