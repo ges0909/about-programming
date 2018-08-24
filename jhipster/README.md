@@ -27,7 +27,7 @@ yarn global add yo # install 'yeoman' globally
 yarn global add generator-jhipster
 ```
 
-Upgrade:
+Upgrade JHipster generator
 
 ```bash
 yarn global upgrade generator-jhipster
@@ -147,6 +147,18 @@ eureka:
 docker-compose -f src/main/docker/mariadb.yml up [ --detach ]
 docker-compose -f src/main/docker/mariadb.yml stop
 ```
+
+#### 5. Create an entity
+
+
+Define your entity model with [JDL-Studio](https://start.jhipster.tech/jdl-studio/).
+
+Download `jhipster-jdl.jh`, copy it to your project folder and rename it.
+
+```bash
+cd normality-generator
+mv jhipster-jdl.jh normality.jdl
+jhipster import-jdl normality.jdl [ --force ]
 
 ### Docker
 
