@@ -150,17 +150,30 @@ docker-compose -f src/main/docker/mariadb.yml stop
 
 #### 5. Create an entity
 
-Define your entity model with [JDL-Studio](https://start.jhipster.tech/jdl-studio/).
+##### Define entities
 
-Download `jhipster-jdl.jh`, copy it to your project folder and rename it.
+Define your entities with [JDL-Studio](https://start.jhipster.tech/jdl-studio/) or [JHipster Domain Language (JDL)](https://www.jhipster.tech/jdl/).
+
+If defined with _JDL Studio_, download `jhipster-jdl.jh`, copy it to your project folder and rename it.
 
 ```bash
 cd normality-generator
 mv jhipster-jdl.jh normality.jdl
+```
+
+##### Generate entities
+
+```bash
 jhipster import-jdl normality.jdl [ --force ]
 ```
 
-After entity update execute commands against the running database:
+More than one `*.jdl` file may be given on command line.
+
+By default `import-jdl` regenerates only entities which have changed. Flag `--forced` generates all entities from scratch.
+
+##### Update database 
+
+Database must be running.
 
 ```bash
 gradlew liquibaseClearCheckSums
