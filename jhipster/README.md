@@ -160,6 +160,13 @@ mv jhipster-jdl.jh normality.jdl
 jhipster import-jdl normality.jdl [ --force ]
 ```
 
+After entity update execute commands against the running database:
+
+```bash
+gradlew liquibaseClearCheckSums
+gradlew liquibaseDiffChangelog
+```
+
 ### Docker
 
 #### Building and running a Docker image
