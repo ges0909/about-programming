@@ -20,20 +20,20 @@ Prerequisites:
 * [Yarn](https://yarnpkg.com/lang/en/)
 * [Docker for Windows](https://docs.docker.com/docker-for-windows/install/) (requires Win 10 Pro or higher)
 
-Install:
+Install _Yeoman_ and _JHipster_:
 
 ```bash
 yarn global add yo # install 'yeoman' globally
 yarn global add generator-jhipster
 ```
 
-Upgrade JHipster generator
+Upgrade to new _JHipster_ version:
 
 ```bash
 yarn global upgrade generator-jhipster
 ```
 
-## Project scaffolding with JHipster
+## Scaffolding
 
 JHipster knows two types of projects: _Monolithic_- and _Microservice applications_.
 
@@ -141,7 +141,7 @@ eureka:
         enabled: false
 ```
 
-#### 4. Development database
+#### 4. Non-embedded development database
 
 ```docker
 docker-compose -f src/main/docker/mariadb.yml up [ --detach ]
@@ -149,8 +149,6 @@ docker-compose -f src/main/docker/mariadb.yml stop
 ```
 
 #### 5. Create an entity
-
-##### Define entities
 
 Define your entities with [JDL-Studio](https://start.jhipster.tech/jdl-studio/) or [JHipster Domain Language (JDL)](https://www.jhipster.tech/jdl/).
 
@@ -161,7 +159,7 @@ cd normality-generator
 mv jhipster-jdl.jh normality.jdl
 ```
 
-##### Generate entities
+Generate entities:
 
 ```bash
 jhipster import-jdl normality.jdl [ --force ]
@@ -171,9 +169,7 @@ More than one `*.jdl` file may be given on command line.
 
 By default `import-jdl` regenerates only entities which have changed. Flag `--forced` generates all entities from scratch.
 
-##### Update database 
-
-Database must be running.
+Update running database: 
 
 ```bash
 gradlew liquibaseClearCheckSums
@@ -182,7 +178,7 @@ gradlew liquibaseDiffChangelog
 
 ### Docker
 
-#### Building and running a Docker image
+#### Build and run a Docker image
 
 To create a Docker image of your application, and push it into your Docker registry:
 
@@ -199,7 +195,7 @@ docker-compose -f src/main/docker/app.yml up
 
 The same applies to the `gateway`. It is reachable now on `http://localhost:8080`.
 
-#### Generating a custom Docker-Compose configuration for multiple applications
+#### Generate a custom Docker-Compose configuration for multiple applications
 
 ```bash
 mkdir docker-compose && cd docker-compose
@@ -211,6 +207,27 @@ Run all services including database(s).
 ```bash
 docker-compose up
 ```
+
+To scale add to `*.yml` file
+
+```yml
+ports:
+    - "8083-8085:8083"
+```
+
+and run with
+
+```bash
+docker-compose up --scale normalitygenerator-app=3
+```
+
+### SonarQube
+
+1. Start _SonarQube_ server with `docker-compose -f src/main/docker/sonar.yml up -d` .
+1. Build application and run tests with `gradlew -Pprod clean test sonarqube` .
+1. Navigate to `http://localhost:9000` .
+
+See more on [Code quality](https://www.jhipster.tech/code-quality/) and [Continuous Code Quality](https://www.sonarqube.org/).
 
 ### Upgrade application
 
