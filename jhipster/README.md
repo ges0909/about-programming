@@ -169,7 +169,7 @@ More than one `*.jdl` file may be given on command line.
 
 By default `import-jdl` regenerates only entities which have changed. Flag `--forced` generates all entities from scratch.
 
-Update running database: 
+Update running database:
 
 ```bash
 gradlew liquibaseClearCheckSums
@@ -178,54 +178,37 @@ gradlew liquibaseDiffChangelog
 
 ### Docker
 
-#### Build and run a Docker image
+To create a image of your application and push it into your _Docker_ registry.
 
-To create a Docker image of your application, and push it into your Docker registry:
+* `cd ../consolidator`
+* `gradlew clean bootWar -Pprod buildDocker`
 
-```bash
-cd ../consolidator
-gradlew clean bootWar -Pprod buildDocker
-```
+To run this image, use the _Docker Compose_ configuration located in _src/main/docker_:
 
-To run this image, use the Docker Compose configuration located in the `src/main/docker` folder of your application:
+* `docker-compose -f src/main/docker/app.yml up`
 
-```bash
-docker-compose -f src/main/docker/app.yml up
-```
+The same applies to the _gateway_. It is reachable now on `http://localhost:8080`.
 
-The same applies to the `gateway`. It is reachable now on `http://localhost:8080`.
+To generate a custom Docker-Compose configuration for multiple applications:
 
-#### Generate a custom Docker-Compose configuration for multiple applications
+* `mkdir docker-compose && cd docker-compose`
+* `jhipster docker-compose`
+* `docker-compose up`
 
-```bash
-mkdir docker-compose && cd docker-compose
-jhipster docker-compose
-```
+To scale:
 
-Run all services including database(s).
+* add port range to _docker-compose.yml_: `ports: ... - "8083-8085:8083"`
+* `docker-compose up --scale normalitygenerator-app=3`
 
-```bash
-docker-compose up
-```
+To scale 'out-of-the-box':
 
-To scale add to `*.yml` file
-
-```yml
-ports:
-    - "8083-8085:8083"
-```
-
-and run with
-
-```bash
-docker-compose up --scale normalitygenerator-app=3
-```
+* `docker-compose --file src\main\docker\app.yml up --scale normalitygenerator-app=5`
 
 ### SonarQube
 
-1. Start _SonarQube_ server with `docker-compose -f src/main/docker/sonar.yml up -d` .
-1. Build application and run tests with `gradlew -Pprod clean test sonarqube` .
-1. Navigate to `http://localhost:9000` .
+* start _SonarQube_ server with `docker-compose -f src/main/docker/sonar.yml up -d`
+* build application and run tests with `gradlew -Pprod clean test sonarqube`
+* navigate to `http://localhost:9000`
 
 See more on [Code quality](https://www.jhipster.tech/code-quality/) and [Continuous Code Quality](https://www.sonarqube.org/).
 
