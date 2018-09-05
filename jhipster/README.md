@@ -17,7 +17,7 @@ Prerequisites:
 
 * [JDK 8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
 * [Node.js + npm](https://nodejs.org/en/)
-* [Yarn](https://yarnpkg.com/lang/en/)
+* [Yarn](https://yarnpkg.com/lang/en/) (deprecated)
 * [Docker for Windows](https://docs.docker.com/docker-for-windows/install/) (requires Win 10 Pro or higher)
 
 Install _Yeoman_ and _JHipster_:
@@ -118,7 +118,7 @@ git add .
 git commit -m "Gateway created"
 ```
 
-#### 3. Build your microservice
+#### 3. Build microservice
 
 ```bash
 cd ..
@@ -133,12 +133,70 @@ git flow init
 gradlew
 ```
 
-To avoid Eureka discovery procedure at startup add to `application-dev.yml`:
+#### 4. Configurations
 
-```yaml
+```yml
+# file: application*.yml
+# avoid eureka discovery procedure at startup
 eureka:
     client:
         enabled: false
+```
+
+```yml
+# ribbon apps. incl. gateways => file: application*.yml
+# see: https://stackoverflow.com/questions/39602627/spring-cloud-feign-hytrix-first-call-timeout
+# When using Zuul each proxied request is wrapped automatically in a hystrix command.
+# So you need to configure the hystrix timeouts to be slightly larger than the ribbon
+# timeouts.
+hystrix:
+    threadpool:
+        default:
+            coreSize: 20
+            maxQueueSize: 500000
+            keepAliveTimeMinutes: 2
+            queueSizeRejectionThreshold: 500000
+    command:
+        default:
+            fallback:
+                isolation:
+                    semaphore:
+                        maxConcurrentRequests: 20
+            execution:
+                timeout:
+                    enabled: false
+                isolation:
+                    strategy: THREAD
+                    thread:
+                        timeoutInMilliseconds: 121000
+ribbon:
+    ConnectTimeout: 20000
+    ReadTimeout: 40000
+```
+
+```yml
+# feign clients => file: application*.yml
+# keep in mind that feign uses ribbon internally
+feign:
+    hystrix:
+        # disable hystrix curcuit breaker for feign clients
+        enabled: false
+```
+
+```yml
+# file: docker-compose/central-server-config/application.yml
+eureka:
+    # avoid registry peer replication
+    server:
+        maxThreadsForPeerReplication: 0
+```
+
+```yml
+# file: docker-compose/docker-compose.yml
+volumes:
+    # mount host dir into container
+    # IMPORTANT: If this is changed the container image must be removed from docker registry.
+    - ../../../Desktop/testOutput:/data
 ```
 
 #### 4. Non-embedded development database
