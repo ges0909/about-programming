@@ -31,6 +31,9 @@ Upgrade to new _JHipster_ version:
 
 ```bash
 yarn global upgrade generator-jhipster
+# or
+yarn global remove generator-jhipster
+yarn global add generator-jhipster
 ```
 
 ## Scaffolding

@@ -5,7 +5,9 @@ lang: en-US
 ---
 # Docker
 
-## Installation
+## Install Docker
+
+### Windows
 
 [Docker for Windows](https://docs.docker.com/docker-for-windows/install/) requires Windows 10 Pro or higher.
 
@@ -17,10 +19,39 @@ After installing **Docker for Windows** the option _Switch to Windows containers
 **Kitematic** is downloaded by selecting the context-menu option _Kitematic_.
 :::
 
-## Clear image registry
+### CentOS
 
-```bash
-docker system prune
-# or
-docker system prune -a
-```
+1. Update package database.
+    * `sudo yum check-update`
+1. Download latest docker version.
+    * `curl -fsSL https://get.docker.com/ | sh`
+1. Start docker daemon.
+    * `sudo systemctl start docker`
+    * `sudo systemctl stop docker`
+    * `sudo systemctl restart docker`
+1. Verify running docker daemon.
+    * `sudo systemctl status docker`
+1. Enable docker to start at boot time automatically.
+    * `sudo systemctl enable docker`
+1. Add users to _docker_ group to run docker command without _sudo_:
+    * `sudo usermod -aG docker schrager`
+    * ...
+1. Log out and log in again to update the user groups list.
+
+## Install Docker Compose
+
+1. Download latest compose version (here 1.22.0).
+    * `curl -L "https://github.com/docker/compose/releases/download/1.22.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose`
+1. Apply executable permissions to the binary.
+    * `sudo chmod +x /usr/local/bin/docker-compose`
+1. Test the installation.
+    * `docker-compose -v`
+
+## Useful Docker Commands
+
+* Accessing container: `docker exec -it <container name> bash`
+* Accessing container log: `docker logs <container name>`
+* Stop container: `docker stop <container name>`
+* List Docker volumes: `docker volume ls`
+* Remove Docker volumes(s): `docker volume rm ...`
+* Clear image registry: `docker system prune` or `docker system prune -a`
