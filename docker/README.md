@@ -5,9 +5,7 @@ lang: en-US
 ---
 # Docker
 
-## Install Docker
-
-### Windows
+## Install Docker on Windows
 
 [Docker for Windows](https://docs.docker.com/docker-for-windows/install/) requires Windows 10 Pro or higher.
 
@@ -19,7 +17,7 @@ After installing **Docker for Windows** the option _Switch to Windows containers
 **Kitematic** is downloaded by selecting the context-menu option _Kitematic_.
 :::
 
-### CentOS
+## Install Docker on CentOS
 
 1. Update package database.
     * `sudo yum check-update`
@@ -38,7 +36,7 @@ After installing **Docker for Windows** the option _Switch to Windows containers
     * ...
 1. Log out and log in again to update the user groups list.
 
-## Install Docker Compose
+### Install Docker Compose
 
 1. Download latest compose version (here 1.22.0).
     * `curl -L "https://github.com/docker/compose/releases/download/1.22.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose`
