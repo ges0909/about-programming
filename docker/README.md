@@ -44,6 +44,29 @@ After installing **Docker for Windows** the option _Switch to Windows containers
     * `sudo chmod +x /usr/local/bin/docker-compose`
 1. Test the installation.
     * `docker-compose -v`
+  
+## Install Docker in Docker Container (Alpine Linux)
+
+* login to docker container and check version
+  * `cat /etc/alpine-release`
+
+* update list of available software
+  * `apk update`
+
+* install docker
+  * `apk add docker`
+
+* install `openrc` package (required for `rc-update` and `service` commands)
+  * `apk add openrc --no-cache`
+
+* configure docker daemon to start automatically on boot
+  * `rc-update add docker boot`
+
+* start docker daemon
+  * `service docker start`
+
+* verify if it is running
+  * `docker ps`
 
 ## Useful Docker Commands
 
