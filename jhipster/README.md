@@ -36,11 +36,7 @@ yarn global remove generator-jhipster
 yarn global add generator-jhipster
 ```
 
-## Scaffolding
-
-JHipster knows two types of projects: _Monolithic_- and _Microservice applications_.
-
-### Monolithic
+## Generate a Monolithic Application
 
 ```bash
 mkdir jhipster-monolithic-demo && cd jhipster-monolithic-demo
@@ -66,7 +62,7 @@ jhipster docker-compose
 docker-compose
 ```
 
-### Microservice
+## Generate a Microservice
 
 Read [Building A Simple Microservice With JHipster In 20 Minutes](http://blog.avenuecode.com/building-a-microservice-in-20-minutes-with-jhipster).
 
@@ -78,13 +74,36 @@ _Docker_ must be running and TLS must be **disabled** (_Settings_ > _General_ > 
 
 ---
 
-#### Create project folder
+### 1. Build a Microservice
 
 ```bash
-mkdir jhipster-microservice-demo && cd jhipster-microservice-demo
+mkdir demo && cd demo
+jhipster
+? Which *type* of application would you like to create? Microservice application
+? What is the base name of your application? RecognizerOfRemarkablePatterns
+? As you are running in a microservice architecture, on which port would like your server to run? It should be unique to avoid port conflicts. 8086
+? What is your default Java package name? de.infinitservices.forge.serviceplatform.recognizerofremarkablepatterns
+? Which service discovery server do you want to use? JHipster Registry (uses Eureka, provides Spring Cloud Config support and monitoring dashboards)
+? Which *type* of authentication would you like to use? JWT authentication (stateless, with a token)
+? Which *type* of database would you like to use? SQL (H2, MySQL, MariaDB, PostgreSQL, Oracle, MSSQL)
+? Which *production* database would you like to use? MariaDB
+? Which *development* database would you like to use? MariaDB
+? Do you want to use the Spring cache abstraction? Yes, with the Hazelcast implementation (distributed cache, for multiple nodes)
+? Do you want to use Hibernate 2nd level cache? Yes
+? Would you like to use Maven or Gradle for building the backend? Gradle
+? Which other technologies would you like to use?
+? Would you like to enable internationalization support? No
+? Besides JUnit and Jest, which testing frameworks would you like to use?
+? Would you like to install other generators from the JHipster Marketplace? (y/N) No
 ```
 
-#### 1. Build registry
+```bash
+git flow init
+
+gradlew
+```
+
+### 2. Build the Registry
 
 Download `war` from [here](https://github.com/jhipster/jhipster-registry/releases).
 
@@ -95,7 +114,7 @@ java -jar jhipster-registry-4.0.0.war
 
 Navigate to `http://localhost:8761`.
 
-#### 2. Build gateway
+### 3. Build the Gateway
 
 ... with Admin UI, Account database, etc.
 
@@ -121,22 +140,7 @@ git add .
 git commit -m "Gateway created"
 ```
 
-#### 3. Build microservice
-
-```bash
-cd ..
-mkdir consolidator && cd consolidator
-
-jhipster
-# ... Microservice application, consolidator, de.infinitservices.forge.serviceplatform, No service discovery, JWT, No database, Gradle
-# ...
-
-git flow init
-
-gradlew
-```
-
-#### 4. Configurations
+### 4. Configuration
 
 ```yml
 # file: application*.yml
@@ -202,14 +206,14 @@ volumes:
     - ../../../Desktop/testOutput:/data
 ```
 
-#### 4. Non-embedded development database
+### 5. Non-embedded development database
 
 ```docker
 docker-compose -f src/main/docker/mariadb.yml up [ --detach ]
 docker-compose -f src/main/docker/mariadb.yml stop
 ```
 
-#### 5. Create an entity
+### 6. Create an entity
 
 Define your entities with [JDL-Studio](https://start.jhipster.tech/jdl-studio/) or [JHipster Domain Language (JDL)](https://www.jhipster.tech/jdl/).
 
@@ -237,7 +241,7 @@ gradlew liquibaseClearCheckSums
 gradlew liquibaseDiffChangelog
 ```
 
-### Docker
+## Docker
 
 To create a image of your application and push it into your _Docker_ registry.
 
@@ -265,7 +269,7 @@ To scale 'out-of-the-box':
 
 * `docker-compose --file src\main\docker\app.yml up --scale normalitygenerator-app=5`
 
-### SonarQube
+## SonarQube
 
 * start _SonarQube_ server with `docker-compose -f src/main/docker/sonar.yml up -d`
 * build application and run tests with `gradlew -Pprod clean test sonarqube`
@@ -273,10 +277,10 @@ To scale 'out-of-the-box':
 
 See more on [Code quality](https://www.jhipster.tech/code-quality/) and [Continuous Code Quality](https://www.sonarqube.org/).
 
-### Upgrade application
+## Upgrade application
 
 See [Upgrading an application](https://www.jhipster.tech/upgrading-an-application/).
 
-### IntelliJ
+## IntelliJ
 
 Load generated project with **_File_ > _Open_** to avoid trouble with _Spring_ annotation processing.
