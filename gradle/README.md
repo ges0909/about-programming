@@ -28,3 +28,9 @@ mkdir my-project && cd  my-project
 git flow init
 gradle init --type java-library
 ```
+
+## Upgrade Gradle Installation with Gradle Wrapper
+
+* `./gradlew wrapper --gradle-version=4.10.2 --distribution-type=bin`
+  
+The next invocation of `gradlew` will download and cache the specified version of Gradle.

@@ -15,7 +15,7 @@ Don't use `git-bash` for [JHipster](https://www.jhipster.tech/) console commands
 
 Prerequisites:
 
-* [JDK 8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
+* [OpenJDK 8](https://openjdk.java.net/)
 * [Node.js + npm](https://nodejs.org/en/)
 * [Yarn](https://yarnpkg.com/lang/en/) (deprecated)
 * [Docker for Windows](https://docs.docker.com/docker-for-windows/install/) (requires Win 10 Pro or higher)
