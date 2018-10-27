@@ -3,25 +3,9 @@ title: Node, npm and yarn
 sidebar: auto
 lang: en-US
 ---
-# Node, Npm and Yarn
+# Npm and Yarn
 
-## Node
-
-### Update on Windows
-
-* start a _PowerShell_ as **Administrator** and run commands
-
-```powershell
-Set-ExecutionPolicy Unrestricted -Scope CurrentUser -Force
-npm install --global --production npm-windows-upgrade
-npm-windows-upgrade
-```
-
-See more:
-
-* [npm-windows-upgrade](https://github.com/felixrieseberg/npm-windows-upgrade)
-
-### Upgrade other global packages
+## Upgrade global packages
 
 ```bash
 npm update -g
