@@ -17,14 +17,17 @@ Design philosophy: Features are provided by gradle plugins.
 
 ## Creating a Java project
 
+build.gradle:
+
 ```gradle
 apply plugin: 'java'
 ```
 
-## Setup Java Project
+### Init a Java project
 
 ```bash
-mkdir my-project && cd  my-project
-git flow init
-gradle init --type java-library
+mkdir my-project && cd my-project
+gradle init --type java-application
 ```
+
+Types applicable are found in [Build Init Plugin](https://docs.gradle.org/current/userguide/build_init_plugin.html).

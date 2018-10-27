@@ -3,11 +3,11 @@ title: Node, npm and yarn
 sidebar: auto
 lang: en-US
 ---
-# Node, npm and yarn
+# Node, Npm and Yarn
 
 ## Node
 
-### Update on windows
+### Update on Windows
 
 * start a _PowerShell_ as **Administrator** and run commands
 

@@ -16,6 +16,10 @@ Read [The Practical Test Pyramid](https://martinfowler.com/articles/practical-te
 
 [Mockito](https://site.mockito.org/) to mock dependencies.
 
+```gradle
+dependencies { testCompile 'org.mockito:mockito-core:2.+' }
+```
+
 ## Wiremock
 
 [WireMock](http://wiremock.org/) to stub out external services.

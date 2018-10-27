@@ -14,26 +14,21 @@ module.exports = {
         items: [
           { text: 'Vue', link: '/vue/' },
           { text: 'Vuepress', link: '/vuepress/' },
-          { text: 'Node + Yarn + Npm', link: '/node_npm_yarn/' }
+          { text: 'Yarn + Npm', link: '/npm_yarn/' }
         ]
       },
       {
         text: 'Java',
-        items: [
-          { text: 'Gradle', link: '/gradle/' },
-          { text: 'Date/Time', link: '/date_time/' },
-          { text: 'Streams', link: '/streams/' },
-          { text: 'Unit-Test', link: '/unittest/' }
-        ]
+        items: [ { text: 'Unit-Test', link: '/unittest/' } ]
       },
       {
         text: 'Tools',
         items: [
           { text: 'Git', link: '/git/' },
-          { text: 'Gitbook', link: '/gitbook/' },
+          { text: 'Gradle', link: '/gradle/' },
           { text: 'JHipster', link: '/jhipster/' },
           { text: 'Docker', link: '/docker/' },
-          { text: 'PowerShell', link: '/powershell/' }
+          { text: 'Gitbook', link: '/gitbook/' }
         ]
       }
     ],
