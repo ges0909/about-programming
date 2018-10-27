@@ -3,17 +3,21 @@ title: Node, npm and yarn
 sidebar: auto
 lang: en-US
 ---
-# Npm and Yarn
+# Npm vs. Yarn
 
-## Upgrade global packages
+Upgrade global packages
 
-```bash
-npm update -g
-npm update -g vuepress
-# or
-yarn global upgrade
-yarn global upgrade vuepress
-```
+* `npm update -g`
+* `npm update -g vuepress`
+
+or
+
+* `yarn global upgrade`
+* `yarn global upgrade vuepress`
+
+Upgrade all `package.json` dependencies
+
+* `yarn upgrade --latest`
 
 ## Yarn vs. Npm
 
