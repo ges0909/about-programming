@@ -20,6 +20,8 @@ Design philosophy: Features are provided by gradle plugins.
 1. `mkdir my-project && cd  my-project`
 1. `gradle init –type java-application`
 
+Types applicable are found in [Build Init Plugin](https://docs.gradle.org/current/userguide/build_init_plugin.html).
+
 ## Upgrade Gradle Installation with Gradle Wrapper
 
 * `./gradlew wrapper --gradle-version=4.10.2 --distribution-type=bin`

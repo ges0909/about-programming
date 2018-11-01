@@ -281,6 +281,9 @@ See more on [Code quality](https://www.jhipster.tech/code-quality/) and [Continu
 
 See [Upgrading an application](https://www.jhipster.tech/upgrading-an-application/).
 
-## IntelliJ
+### Sub Generators
 
-Load generated project with **_File_ > _Open_** to avoid trouble with _Spring_ annotation processing.
+* `jhispter entity`
+* `jhispter spring-controller`
+* `jhispter spring-service`
+* `jhispter kubernetes`
