@@ -5,7 +5,7 @@ lang: en-US
 ---
 # Gradle
 
-Read [Getting Started With Gradle](https://www.petrikainulainen.net/getting-started-with-gradle/).
+* [Gradle: build.gradle vs. settings.gradle vs. gradle.properties](https://www.baeldung.com/gradle-build-settings-properties)
 
 ## Concepts
 
@@ -17,17 +17,8 @@ Design philosophy: Features are provided by gradle plugins.
 
 ## Creating a Java project
 
-```gradle
-apply plugin: 'java'
-```
-
-## Setup Java Project
-
-```bash
-mkdir my-project && cd  my-project
-git flow init
-gradle init --type java-library
-```
+1. `mkdir my-project && cd  my-project`
+1. `gradle init –type java-application`
 
 ## Upgrade Gradle Installation with Gradle Wrapper
 
