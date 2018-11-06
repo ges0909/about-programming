@@ -36,6 +36,14 @@ yarn global remove generator-jhipster
 yarn global add generator-jhipster
 ```
 
+## Sub Generators
+
+* `jhipster entity`
+* `jhipster spring-controller`
+* `jhipster spring-service`
+* `jhipster kubernetes`
+* `jhipster import-jdl *.jh`
+
 ## Generate a Monolithic Application
 
 ```bash
@@ -219,18 +227,13 @@ Define your entities with [JDL-Studio](https://start.jhipster.tech/jdl-studio/) 
 
 If defined with _JDL Studio_, download `jhipster-jdl.jh`, copy it to your project folder and rename it.
 
-```bash
-cd normality-generator
-mv jhipster-jdl.jh normality.jdl
-```
-
 Generate entities:
 
 ```bash
-jhipster import-jdl normality.jdl [ --force ]
+jhipster import-jdl normality.jh [ --force ]
 ```
 
-More than one `*.jdl` file may be given on command line.
+More than one `*.jh` file may be given on command line.
 
 By default `import-jdl` regenerates only entities which have changed. Flag `--forced` generates all entities from scratch.
 
@@ -280,10 +283,3 @@ See more on [Code quality](https://www.jhipster.tech/code-quality/) and [Continu
 ## Upgrade application
 
 See [Upgrading an application](https://www.jhipster.tech/upgrading-an-application/).
-
-### Sub Generators
-
-* `jhispter entity`
-* `jhispter spring-controller`
-* `jhispter spring-service`
-* `jhispter kubernetes`
