@@ -22,8 +22,12 @@ Design philosophy: Features are provided by gradle plugins.
 
 Types applicable are found in [Build Init Plugin](https://docs.gradle.org/current/userguide/build_init_plugin.html).
 
+## Query dependecies
+
+* `gradlew dependencies --configuration testCompile`
+
 ## Upgrade Gradle Installation with Gradle Wrapper
 
-* `./gradlew wrapper --gradle-version=4.10.2 --distribution-type=bin`
+* `gradlew wrapper --gradle-version=4.10.2 --distribution-type=bin`
   
 The next invocation of `gradlew` will download and cache the specified version of Gradle.
