@@ -8,30 +8,11 @@ lang: en-US
 
 ## Intermediate Operations
 
-* `filter()`
-* `map()`
-* `flatMap()`
-* `distinct()`
-* `sorted()`
-* `peek()`
-* `limit()`
-* `skip()`
+`filter()`, `map()`, `flatMap()`, `distinct()`, `sorted()`, `peek()`, `limit()`, `skip()`
 
 ## Terminal Operations
 
-* `forEach()`
-* `forEachOrdered()`
-* `toArray`
-* `reduce()`
-* `collect()`
-* `min()`
-* `max()`
-* `count()`
-* `anyMatch()`
-* `allMatch()`
-* `noneMatch()`
-* `findFirst()`
-* `findAny()`
+`forEach()`, `forEachOrdered()`, `toArray`, `reduce()`, `collect()`, `min()`, `max()`, `count()`, `anyMatch()`, `allMatch()`, `noneMatch()`, `findFirst(, `findAny()`
 
 # Infinite Streams
 
@@ -40,7 +21,6 @@ Stream<Integer> infiniteStream = Stream.iterate(0, i -> i + 2);
 List<Integer> collect = infiniteStream
   .limit(10)
   .collect(Collectors.toList());
-assertEquals(collect, Arrays.asList(0, 2, 4, 6, 8, 10, 12, 14, 16, 18));
 ```
 
 # Infinite Streams of a Custom Type
