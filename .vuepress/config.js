@@ -14,12 +14,15 @@ module.exports = {
         items: [
           { text: 'Vue', link: '/vue/' },
           { text: 'Vuepress', link: '/vuepress/' },
-          { text: 'Yarn + Npm', link: '/npm_yarn/' }
+          { text: 'Yarn / Npm', link: '/npm_yarn/' }
         ]
       },
       {
         text: 'Java',
-        items: [ { text: 'Unit-Test', link: '/unittest/' } ]
+        items: [
+          { text: 'Unit-Test', link: '/java/unittest/' },
+          { text: 'Streams', link: '/java/streams/' }
+        ]
       },
       {
         text: 'Tools',
