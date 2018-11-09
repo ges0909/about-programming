@@ -20,8 +20,9 @@ module.exports = {
       {
         text: 'Java',
         items: [
-          { text: 'Unit-Test', link: '/java/unittest/' },
-          { text: 'Streams', link: '/java/streams/' }
+          { text: 'Streams', link: '/java/streams/' },
+          { text: 'Unit-Test', link: '/java/unittest/' }
+
         ]
       },
       {
