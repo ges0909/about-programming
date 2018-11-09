@@ -12,27 +12,27 @@ module.exports = {
       {
         text: 'Js',
         items: [
-          { text: 'Vue', link: '/vue/' },
-          { text: 'Vuepress', link: '/vuepress/' },
-          { text: 'Yarn / Npm', link: '/npm_yarn/' }
+          { text: 'Vue', link: '/js/vue/' },
+          { text: 'Vuepress', link: '/js/vuepress/' },
+          { text: 'Yarn / Npm', link: '/js/npm_yarn/' }
         ]
       },
       {
         text: 'Java',
         items: [
           { text: 'Streams', link: '/java/streams/' },
-          { text: 'Unit-Test', link: '/java/unittest/' }
+          { text: 'Unit Test', link: '/java/unittest/' }
 
         ]
       },
       {
         text: 'Tools',
         items: [
-          { text: 'Git', link: '/git/' },
-          { text: 'Gradle', link: '/gradle/' },
-          { text: 'JHipster', link: '/jhipster/' },
-          { text: 'Docker', link: '/docker/' },
-          { text: 'Gitbook', link: '/gitbook/' }
+          { text: 'Git', link: '/tools/git/' },
+          { text: 'Gradle', link: '/tools/gradle/' },
+          { text: 'JHipster', link: '/tools/jhipster/' },
+          { text: 'Docker', link: '/tools/docker/' },
+          { text: 'Gitbook', link: '/tools/gitbook/' }
         ]
       }
     ],
