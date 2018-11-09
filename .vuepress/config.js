@@ -1,7 +1,7 @@
 module.exports = {
   base: '/',
-  title: 'How-to',
-  description: "A personal collection of how-to's",
+  title: 'Howto about programming',
+  description: "A personal collection of Howto about programming in Java, etc.",
   port: 2511,
   themeConfig: {
     nav: [
