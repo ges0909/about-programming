@@ -12,27 +12,27 @@ module.exports = {
       {
         text: 'Js',
         items: [
-          { text: 'Vue', link: '/js/vue/' },
-          { text: 'Vuepress', link: '/js/vuepress/' },
-          { text: 'Yarn / Npm', link: '/js/npm_yarn/' }
+          { text: 'Vue', link: '/js/vue' },
+          { text: 'Vuepress', link: '/js/vuepress' },
+          { text: 'Yarn/Npm', link: '/js/npm-yarn' },
+          { text: 'Serverless', link: '/js/serverless' }
         ]
       },
       {
         text: 'Java',
         items: [
-          { text: 'Streams', link: '/java/streams/' },
-          { text: 'Unit Test', link: '/java/unittest/' }
-
+          { text: 'Streams', link: '/java/streams' },
+          { text: 'Unit Test', link: '/java/unit-test' }
         ]
       },
       {
         text: 'Tools',
         items: [
-          { text: 'Git', link: '/tools/git/' },
-          { text: 'Gradle', link: '/tools/gradle/' },
-          { text: 'JHipster', link: '/tools/jhipster/' },
-          { text: 'Docker', link: '/tools/docker/' },
-          { text: 'Gitbook', link: '/tools/gitbook/' }
+          { text: 'Git', link: '/tools/git' },
+          { text: 'Gradle', link: '/tools/gradle' },
+          { text: 'JHipster', link: '/tools/jhipster' },
+          { text: 'Docker', link: '/tools/docker' },
+          { text: 'Gitbook', link: '/tools/gitbook' }
         ]
       }
     ],
