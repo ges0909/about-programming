@@ -1,7 +1,7 @@
 module.exports = {
   base: '/',
   title: 'Howto about programming',
-  description: "A personal collection of Howto about programming in Java, etc.",
+  description: 'A personal collection of Howto about programming in Java, etc.',
   port: 2511,
   themeConfig: {
     nav: [
@@ -10,29 +10,33 @@ module.exports = {
         link: '/'
       },
       {
-        text: 'Js',
-        items: [
-          { text: 'Vue', link: '/js/vue' },
-          { text: 'Vuepress', link: '/js/vuepress' },
-          { text: 'Yarn/Npm', link: '/js/npm-yarn' },
-          { text: 'Serverless', link: '/js/serverless' }
-        ]
-      },
-      {
         text: 'Java',
-        items: [
-          { text: 'Streams', link: '/java/streams' },
-          { text: 'Unit Test', link: '/java/unit-test' }
-        ]
+        items: [ { text: 'Streams', link: '/md/streams' }, { text: 'Unit Test', link: '/md/unit-test' } ]
       },
       {
-        text: 'Tools',
+        text: 'JHipster',
+        items: [ { text: 'JHipster', link: '/md/jhipster' } ]
+      },
+      {
+        text: 'Git',
+        items: [ { text: 'Git', link: '/md/git' } ]
+      },
+      {
+        text: 'Gradle',
+        items: [ { text: 'Gradle', link: '/md/gradle' } ]
+      },
+      {
+        text: 'Docker',
+        items: [ { text: 'Docker', link: '/md/docker' } ]
+      },
+      {
+        text: 'Javascript',
         items: [
-          { text: 'Git', link: '/tools/git' },
-          { text: 'Gradle', link: '/tools/gradle' },
-          { text: 'JHipster', link: '/tools/jhipster' },
-          { text: 'Docker', link: '/tools/docker' },
-          { text: 'Gitbook', link: '/tools/gitbook' }
+          { text: 'Vue', link: '/md/vue' },
+          { text: 'Vuepress', link: '/md/vuepress' },
+          { text: 'Yarn/Npm', link: '/md/npm-yarn' },
+          { text: 'Serverless', link: '/md/serverless' },
+          { text: 'Gitbook', link: '/md/gitbook' }
         ]
       }
     ],
