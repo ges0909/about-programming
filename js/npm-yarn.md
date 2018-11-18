@@ -1,30 +1,19 @@
 ---
-title: Node, npm and yarn
+title:  Npm vs. Yarn
 sidebar: auto
 lang: en-US
 ---
 # Npm vs. Yarn
 
-Upgrade global packages
+| npm                       | yarn                           |   |
+|---------------------------|--------------------------------|---|
+| `npm install -g vuepress` | `yarn global add vuepress`     |   |
+| `npm update -g`           | `yarn global upgrade`          |   |
+| `npm update -g vuepress`  | `yarn global upgrade vuepress` |   |
+|                           | `yarn upgrade --latest`        | 1 |
+|                           | `yarn global remove vuepress`  |   |
+|                           | `yarn autoclean --force`       |   |
+|                           | `yarn cache clean`             |   |
+| `npm list -g`             |                                |   |
 
-* `npm update -g`
-* `npm update -g vuepress`
-
-or
-
-* `yarn global upgrade`
-* `yarn global upgrade vuepress`
-
-Upgrade all `package.json` dependencies
-
-* `yarn upgrade --latest`
-
-## Yarn vs. Npm
-
-| yarn                          | npm                       |
-| ----------------------------- | ------------------------- |
-| `yarn global add vuepress`    | `npm install -g vuepress` |
-| `yarn global remove vuepress` |                           |
-| `yarn autoclean --force`      |                           |
-| `yarn cache clean`            |                           |
-|                               | `npm list -g`             |
+1. upgrade all `package.json` dependencies

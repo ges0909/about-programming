@@ -1,7 +1,7 @@
 module.exports = {
   base: '/',
   title: 'Howto about programming',
-  description: "A personal collection of Howto about programming in Java, etc.",
+  description: 'A personal collection of Howto about programming in Java, etc.',
   port: 2511,
   themeConfig: {
     nav: [
@@ -14,14 +14,15 @@ module.exports = {
         items: [
           { text: 'Vue', link: '/js/vue' },
           { text: 'Vuepress', link: '/js/vuepress' },
-          { text: 'Yarn/Npm', link: '/js/npm-yarn' },
+          { text: 'Npm vs. Yarn', link: '/js/npm-yarn' },
           { text: 'Serverless', link: '/js/serverless' }
         ]
       },
       {
         text: 'Java',
         items: [
-          { text: 'Streams', link: '/java/streams' },
+          { text: 'Stream', link: '/java/stream' },
+          { text: 'Optional', link: '/java/optional' },
           { text: 'Unit Test', link: '/java/unit-test' }
         ]
       },

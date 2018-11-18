@@ -1,20 +1,19 @@
 ---
-title: Streams
+title: Stream
 sidebar: auto
 lang: en-US
 ---
+# Stream
 
-# Streams
-
-## Intermediate Operations
+Intermediate Operations
 
 `filter()`, `map()`, `flatMap()`, `distinct()`, `sorted()`, `peek()`, `limit()`, `skip()`
 
-## Terminal Operations
+Terminal Operations
 
 `forEach()`, `forEachOrdered()`, `toArray`, `reduce()`, `collect()`, `min()`, `max()`, `count()`, `anyMatch()`, `allMatch()`, `noneMatch()`, `findFirst()`, `findAny()`
 
-## Infinite Streams
+Infinite Streams
 
 ```java
 Stream<Integer> infiniteStream = Stream.iterate(0, i -> i + 2);
@@ -23,7 +22,7 @@ List<Integer> collect = infiniteStream
   .collect(Collectors.toList());
 ```
 
-## Infinite Streams of a Custom Type
+Infinite Streams of a Custom Type
 
 ```java
 Supplier<UUID> randomUUIDSupplier = UUID::randomUUID;
@@ -33,4 +32,3 @@ List<UUID> randomInts = infiniteStreamOfRandomUUID
   .limit(10)
   .collect(Collectors.toList());
 ```
-
