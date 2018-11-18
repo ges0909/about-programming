@@ -17,7 +17,7 @@ Prerequisites:
 
 * [OpenJDK 8](https://openjdk.java.net/)
 * [Node.js + npm](https://nodejs.org/en/)
-* [Yarn](https://yarnpkg.com/lang/en/) (deprecated)
+* [Yarn](https://yarnpkg.com/en/docs/install#windows-stable)
 * [Docker for Windows](https://docs.docker.com/docker-for-windows/install/) (requires Win 10 Pro or higher)
 
 Install _Yeoman_ and _JHipster_:
