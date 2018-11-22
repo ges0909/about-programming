@@ -14,6 +14,7 @@ module.exports = {
         items: [
           { text: 'Stream', link: '/md/stream' },
           { text: 'Optional', link: '/md/optional' },
+          { text: 'Spring Boot', link: '/md/springboot' },
           { text: 'Unit Test', link: '/md/unit-test' }
         ]
       },
