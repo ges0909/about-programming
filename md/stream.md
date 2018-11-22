@@ -48,9 +48,10 @@ Stream<Integer> infiniteStream = Stream.iterate(0, i -> i + 2);
 List<Integer> collect = infiniteStream
   .limit(10)
   .collect(Collectors.toList());
+`
 ```
 
-## Infinite Streams of a Custom Type
+### Infinite Streams of a Custom Type
 
 ```java
 Supplier<UUID> randomUUIDSupplier = UUID::randomUUID;
