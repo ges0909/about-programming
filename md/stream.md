@@ -1,17 +1,45 @@
 ---
-title: Stream
+title: Streams
 sidebar: auto
 lang: en-US
 ---
-# Stream
+# Streams
+
+* `stream()`
+* `parallel()`
+* `parallelStream()`
+* `Stream.of()`
+* `Stream.generate()`
+* `Stream.iterate()`
+
+Intermediate operations are lazy, so they’re not executed until a result of a processing is actually needed.
+
+Computation on the source data is only performed when the terminal operation is initiated, and source elements are consumed only as needed.
 
 ## Intermediate Operations
 
-`filter()`, `map()`, `flatMap()`, `distinct()`, `sorted()`, `peek()`, `limit()`, `skip()`
+* `filter()`
+* `map()`, `flatMap()`, `mapToInt()`, `mapToDouble()`, `mapToObj()`
+* `distinct()`, `sorted()`
+* `peek()`, `limit()`, `skip()`
 
 ## Terminal Operations
 
-`forEach()`, `forEachOrdered()`, `toArray`, `reduce()`, `collect()`, `min()`, `max()`, `count()`, `anyMatch()`, `allMatch()`, `noneMatch()`, `findFirst()`, `findAny()`
+* `forEach()`, `forEachOrdered()`
+* `toArray()`
+* `reduce()`, `collect()`
+* `min()`, `max()`, `count()`, `average()`, `sum()`
+* `anyMatch()`, `allMatch()`, `noneMatch()`
+* `findFirst()`, `findAny()`
+
+## Collectors
+
+* `Collectors.toList()`
+* `Collectors.summarizingDouble()`
+* `Collectors.partitioningBy()`
+* `Collectors.groupingBy()`
+* `Collectors.mapping()`
+* `Collectors.reducing()`
 
 ## Infinite Streams
 
@@ -32,3 +60,7 @@ List<UUID> randomInts = infiniteStreamOfRandomUUID
   .limit(10)
   .collect(Collectors.toList());
 ```
+
+## IntStream
+
+* `IntStream.of()`, `Intstream.range()`

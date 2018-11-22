@@ -12,8 +12,9 @@ module.exports = {
       {
         text: 'Java',
         items: [
-          { text: 'Stream', link: '/md/stream' },
-          { text: 'Optional', link: '/md/optional' },
+          { text: 'Streams', link: '/md/stream' },
+          { text: 'Optionals', link: '/md/optional' },
+          { text: 'Lambdas', link: '/md/lambda' },
           { text: 'Spring Boot', link: '/md/springboot' },
           { text: 'Unit Test', link: '/md/unit-test' }
         ]
