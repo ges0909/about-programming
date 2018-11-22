@@ -40,6 +40,7 @@ Computation on the source data is only performed when the terminal operation is 
 * `Collectors.groupingBy()`
 * `Collectors.mapping()`
 * `Collectors.reducing()`
+* `Collectors.joining()`
 
 ## Infinite Streams
 
