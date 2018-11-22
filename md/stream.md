@@ -64,4 +64,14 @@ List<UUID> randomInts = infiniteStreamOfRandomUUID
 
 ## IntStream
 
-* `IntStream.of()`, `Intstream.range()`
+* `IntStream.of()`
+* `Intstream.range()`,  `Intstream.rangeClosed()
+* `IntStream.iterate()`
+* `IntStream.generate()`
+* `boxed()`
+* `mapToDouble()`, `mapToLong()`
+* `min()`, `max()`, `getAsInt()`
+* `reduce()`
+* `parallel()`
+
+see also: [Java 8: Replace traditional for loops with IntStreams](http://www.deadcoderising.com/2015-05-19-java-8-replace-traditional-for-loops-with-intstreams/) 
