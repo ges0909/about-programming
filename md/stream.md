@@ -65,7 +65,7 @@ List<UUID> randomInts = infiniteStreamOfRandomUUID
 ## IntStream
 
 * `IntStream.of()`
-* `Intstream.range()`,  `Intstream.rangeClosed()
+* `Intstream.range()`, `Intstream.rangeClosed()`
 * `IntStream.iterate()`
 * `IntStream.generate()`
 * `boxed()`
