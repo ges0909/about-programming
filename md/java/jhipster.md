@@ -44,9 +44,9 @@ yarn global upgrade generator-jhipster
 * `jhipster entity`
 * `jhipster spring-controller`
 * `jhipster spring-service`
-* `jhipster kubernetes`
 * `jhipster import-jdl *.jh`
 * `jhipster docker-compose`
+* `jhipster kubernetes`
 
 ## Build a Monolithic Application
 
@@ -148,14 +148,14 @@ volumes:
     - ../../../Desktop/testOutput:/data
 ```
 
-### 5. Non-embedded development database
+### Non-embedded development database
 
 ```docker
 docker-compose -f src/main/docker/mariadb.yml up [ --detach ]
 docker-compose -f src/main/docker/mariadb.yml stop
 ```
 
-### 6. Create an entity
+### Create an entity
 
 Define your entities with [JDL-Studio](https://start.jhipster.tech/jdl-studio/) or [JHipster Domain Language (JDL)](https://www.jhipster.tech/jdl/).
 
