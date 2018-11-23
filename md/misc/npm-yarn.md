@@ -1,9 +1,9 @@
 ---
-title:  Npm vs. Yarn
+title:  Npm/Yarn
 sidebar: auto
 lang: en-US
 ---
-# Npm vs. Yarn
+# Npm/Yarn
 
 | npm                       | yarn                           |   |
 |---------------------------|--------------------------------|---|

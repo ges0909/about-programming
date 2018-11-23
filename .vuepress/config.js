@@ -1,8 +1,8 @@
 module.exports = {
   base: '/',
-  title: 'Howto about programming',
-  description: 'A personal collection of Howto about programming in Java, etc.',
-  port: 2511,
+  title: 'About Programming',
+  description: 'in Java, Spring Boot and Vue.',
+  port: 9961,
   themeConfig: {
     nav: [
       {
@@ -12,34 +12,37 @@ module.exports = {
       {
         text: 'Java',
         items: [
-          { text: 'Streams', link: '/md/java/stream' },
-          { text: 'Optionals', link: '/md/java/optional' },
-          { text: 'Lambdas', link: '/md/java/lambda' },
-          { text: 'Spring Boot', link: '/md/java/springboot' },
-          { text: 'Unit Test', link: '/md/java/unittest' },
-          { text: 'JHipster', link: '/md/java/jhipster' }
+          { text: 'Stream', link: '/md/java/stream' },
+          { text: 'Optional', link: '/md/java/optional' },
+          { text: 'Lambda', link: '/md/java/lambda' },
+          { text: 'Unit Test', link: '/md/java/unittest' }
         ]
       },
       {
-        text: 'Git',
-        items: [ { text: 'Git', link: '/md/git' } ]
-      },
-      {
-        text: 'Gradle',
-        items: [ { text: 'Gradle', link: '/md/gradle' } ]
-      },
-      {
-        text: 'Docker',
-        items: [ { text: 'Docker', link: '/md/docker' } ]
-      },
-      {
-        text: 'Javascript',
+        text: 'Spring',
         items: [
-          { text: 'Vue', link: '/md/vue' },
-          { text: 'Vuepress', link: '/md/vuepress' },
-          { text: 'Npm vs. Yarn', link: '/md/npm-yarn' },
-          { text: 'Serverless', link: '/md/serverless' },
-          { text: 'Gitbook', link: '/md/gitbook' }
+          { text: 'Spring Boot', link: '/md/spring/springboot' },
+          { text: 'JHipster', link: '/md/spring/jhipster' }
+        ]
+      },
+      {
+        text: 'Tools',
+        items: [
+          { text: 'Git', link: '/md/tools/git' },
+          { text: 'Gradle', link: '/md/tools/gradle' },
+          { text: 'Docker', link: '/md/tools/docker' }
+        ]
+      },
+      {
+        text: 'Vue',
+        items: [ { text: 'Vue', link: '/md/vue/vue' }, { text: 'Vuepress', link: '/md/vue/vuepress' } ]
+      },
+      {
+        text: 'Misc',
+        items: [
+          { text: 'Npm/Yarn', link: '/md/misc/npm-yarn' },
+          { text: 'Serverless', link: '/md/misc/serverless' },
+          { text: 'Gitbook', link: '/md/misc/gitbook' }
         ]
       }
     ],
