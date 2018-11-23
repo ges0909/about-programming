@@ -21,7 +21,8 @@ Computation on the source data is only performed when the terminal operation is 
 ## Intermediate Operations
 
 * `filter()`
-* `map()`, `flatMap()`, `mapToInt()`, `mapToDouble()`, `mapToObj()`
+* `map()`, `flatMap()`
+* `mapToInt()`, `mapToLong()`, `mapToDouble()`, `mapToObj()`
 * `distinct()`, `sorted()`
 * `peek()`, `limit()`, `skip()`
 
@@ -51,7 +52,6 @@ Stream<Integer> infiniteStream = Stream.iterate(0, i -> i + 2);
 List<Integer> collect = infiniteStream
   .limit(10)
   .collect(Collectors.toList());
-`
 ```
 
 ### Infinite Streams of a Custom Type
@@ -65,16 +65,19 @@ List<UUID> randomInts = infiniteStreamOfRandomUUID
   .collect(Collectors.toList());
 ```
 
-## IntStream
+## IntStream, LongStream
 
-* `IntStream.of()`
+* `IntStream.of()`, `IntStream.empty()`
+* `IntStream.builder()`
 * `Intstream.range()`, `Intstream.rangeClosed()`
 * `IntStream.iterate()`
 * `IntStream.generate()`
+* `InStream.concat()`
 * `boxed()`
 * `mapToDouble()`, `mapToLong()`
-* `min()`, `max()`, `getAsInt()`
+* `getAsInt()`
 * `reduce()`
-* `parallel()`
-
-see also: [Java 8: Replace traditional for loops with IntStreams](http://www.deadcoderising.com/2015-05-19-java-8-replace-traditional-for-loops-with-intstreams/) 
+* `sequential()`, `parallel()`
+* `asLongStream()`, `asDoubleStream()`
+* `summaryStatistics()`
+* `spliterator()`, `iterator()`
