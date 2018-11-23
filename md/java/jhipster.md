@@ -8,7 +8,7 @@ lang: en-US
 Before you start read [The JHipster Mini-Book](https://www.infoq.com/minibooks/jhipster-4x-mini-book).
 
 ::: tip
-Don't use `git-bash` for [JHipster](https://www.jhipster.tech/) console commands because it has some problems with cursor control making it difficult to configure your application properly. Instead donwload [Cmder](http://cmder.net/) and execute `.\cmder.exe /REGISTER ALL` as administrator.
+Don't use `git-bash` as console for [JHipster](https://www.jhipster.tech/). The `bash` has problems with cursor control making it difficult to configure your application. Instead donwload [Cmder](http://cmder.net/) and execute `.\cmder.exe /REGISTER ALL` as administrator.
 :::
 
 ## Installation
@@ -18,7 +18,12 @@ Prerequisites:
 * [OpenJDK 8](https://openjdk.java.net/)
 * [Node.js + npm](https://nodejs.org/en/)
 * [Yarn](https://yarnpkg.com/en/docs/install#windows-stable)
+* [Git for Windows](https://git-scm.com/download/win)
 * [Docker for Windows](https://docs.docker.com/docker-for-windows/install/) (requires Win 10 Pro or higher)
+
+::: tip
+_Docker_ must be running and TLS must be **disabled** (_Settings_ > _General_ > _Expose daemon ... without TLS_).
+:::
 
 Install _Yeoman_ and _JHipster_:
 
@@ -31,124 +36,53 @@ Upgrade to new _JHipster_ version:
 
 ```bash
 yarn global upgrade generator-jhipster
-# or
-yarn global remove generator-jhipster
-yarn global add generator-jhipster
 ```
 
 ## Sub Generators
 
+* `jhipster upgrade`
 * `jhipster entity`
 * `jhipster spring-controller`
 * `jhipster spring-service`
 * `jhipster kubernetes`
 * `jhipster import-jdl *.jh`
+* `jhipster docker-compose`
 
-## Generate a Monolithic Application
+## Build a Monolithic Application
 
-```bash
-mkdir jhipster-monolithic-demo && cd jhipster-monolithic-demo
+1. `mkdir jhipster-monolithic-demo && cd jhipster-monolithic-demo`
+1. `jhipster`  # select _Monolithic application_
+1. `git flow init`
+1. `gradlew` # build back-end
+1. `yarn start` # build front-end
+1. `gradlew -Pprod bootWar buildDocker` # build docker image
+1. `mkdir docker; cd docker/; jhipster docker-compose`
+1. `docker-compose`
 
-jhipster
-# ... Monolithic application, JWT authentication, SQL, MySQL, Angular 6
-# ...
+## Build a Microservice
 
-git flow init
+### Microservice
 
-# build back-end
-gradlew
-# build front-end
-yarn start
+1. `jhipster` # select _Microservice application_
+1. `git flow init`
+1. `gradlew`
 
-# build docker image
-gradlew -Pprod bootWar buildDocker
+### Registry
 
-mkdir docker
-cd docker/
-jhipster docker-compose
+1. `mkdir registry && cd registry`
+1. download `war` file from [here](https://github.com/jhipster/jhipster-registry/releases)
+1. run `java -jar jhipster-registry-4.0.0.war`
+1. navigate to `http://localhost:8761`
 
-docker-compose
-```
+### Gateway
 
-## Generate a Microservice
+1. `mkdir gateway && cd gateway`
+1. `jhipster` # select _Microservice gateway_
+1. `gradlew`
+1. `yarn start`
+1. checkin-in project to _Git_
 
-Read [Building A Simple Microservice With JHipster In 20 Minutes](http://blog.avenuecode.com/building-a-microservice-in-20-minutes-with-jhipster).
-
----
-
-::: tip
-_Docker_ must be running and TLS must be **disabled** (_Settings_ > _General_ > _Expose daemon ... without TLS_).
-:::
-
----
-
-### 1. Build a Microservice
-
-```bash
-mkdir demo && cd demo
-jhipster
-? Which *type* of application would you like to create? Microservice application
-? What is the base name of your application? RecognizerOfRemarkablePatterns
-? As you are running in a microservice architecture, on which port would like your server to run? It should be unique to avoid port conflicts. 8086
-? What is your default Java package name? de.infinitservices.forge.serviceplatform.recognizerofremarkablepatterns
-? Which service discovery server do you want to use? JHipster Registry (uses Eureka, provides Spring Cloud Config support and monitoring dashboards)
-? Which *type* of authentication would you like to use? JWT authentication (stateless, with a token)
-? Which *type* of database would you like to use? SQL (H2, MySQL, MariaDB, PostgreSQL, Oracle, MSSQL)
-? Which *production* database would you like to use? MariaDB
-? Which *development* database would you like to use? MariaDB
-? Do you want to use the Spring cache abstraction? Yes, with the Hazelcast implementation (distributed cache, for multiple nodes)
-? Do you want to use Hibernate 2nd level cache? Yes
-? Would you like to use Maven or Gradle for building the backend? Gradle
-? Which other technologies would you like to use?
-? Would you like to enable internationalization support? No
-? Besides JUnit and Jest, which testing frameworks would you like to use?
-? Would you like to install other generators from the JHipster Marketplace? (y/N) No
-```
-
-```bash
-git flow init
-
-gradlew
-```
-
-### 2. Build the Registry
-
-Download `war` from [here](https://github.com/jhipster/jhipster-registry/releases).
-
-```bash
-mkdir registry
-java -jar jhipster-registry-4.0.0.war
-```
-
-Navigate to `http://localhost:8761`.
-
-### 3. Build the Gateway
-
-... with Admin UI, Account database, etc.
-
-```bash
-cd ..
-mkdir gateway && cd gateway
-
-jhipster
-# ... Microservice gateway, No service discovery, JWT, SQL, PostgreSQL, H2 with disk-based persistence, No cache (!), Gradle
-# ...
-
-# build back-end
-gradlew
-# build front-end
-yarn start
-```
-
-"_At this point, it’s a good idea to check your project into Git so you can easily see what changes are made going forward._" ([here](https://developer.okta.com/blog/2017/06/20/develop-microservices-with-jhipster))
-
-```bash
-git init
-git add .
-git commit -m "Gateway created"
-```
-
-### 4. Configuration
+### Externalized Configuration
 
 ```yml
 # file: application*.yml
@@ -280,6 +214,3 @@ To scale 'out-of-the-box':
 
 See more on [Code quality](https://www.jhipster.tech/code-quality/) and [Continuous Code Quality](https://www.sonarqube.org/).
 
-## Upgrade application
-
-See [Upgrading an application](https://www.jhipster.tech/upgrading-an-application/).

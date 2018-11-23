@@ -12,6 +12,8 @@ lang: en-US
 * `Stream.generate()`
 * `Stream.iterate()`
 
+* `Arrays.stream()`
+
 Intermediate operations are lazy, so they’re not executed until a result of a processing is actually needed.
 
 Computation on the source data is only performed when the terminal operation is initiated, and source elements are consumed only as needed.

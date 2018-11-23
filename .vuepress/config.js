@@ -12,16 +12,13 @@ module.exports = {
       {
         text: 'Java',
         items: [
-          { text: 'Streams', link: '/md/stream' },
-          { text: 'Optionals', link: '/md/optional' },
-          { text: 'Lambdas', link: '/md/lambda' },
-          { text: 'Spring Boot', link: '/md/springboot' },
-          { text: 'Unit Test', link: '/md/unit-test' }
+          { text: 'Streams', link: '/md/java/stream' },
+          { text: 'Optionals', link: '/md/java/optional' },
+          { text: 'Lambdas', link: '/md/java/lambda' },
+          { text: 'Spring Boot', link: '/md/java/springboot' },
+          { text: 'Unit Test', link: '/md/java/unittest' },
+          { text: 'JHipster', link: '/md/java/jhipster' }
         ]
-      },
-      {
-        text: 'JHipster',
-        items: [ { text: 'JHipster', link: '/md/jhipster' } ]
       },
       {
         text: 'Git',
