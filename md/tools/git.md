@@ -3,62 +3,44 @@ title: Git
 sidebar: auto
 lang: en-US
 ---
-<!-- markdownlint-disable MD033 -->
-
 # Git
 
-## Config git
+Looking for a fast and sleek Git client, see [Fork](https://git-fork.com/).
+## Git config
 
-```bash
-git config --global user.name "Gerrit Schrader"
-git config --global user.email gerrit.schrader@example.com
-```
+1. `git config --global user.name "First Last"`
+1. `git config --global user.email first.last@gmail.com`
 
 ## Init repo
 
-```bash
-  mkdir project && cd project
-  git init
-  git remote add origin https://github.com/ges0909/<project>.git
-  git add .
-  git commit -a -m "initial commit"
-  git push -u origin --all
-```
+1. `mkdir project && cd project`
+1. `git init`
+1. `git remote add origin git@github.com:<account>/<repo>.git`
+1. `git add .`
+1. `git commit -a -m "initial commit"`
+1. `git push -u origin --all`
 
-## Gitflow
+## Git flow
 
-See [git-flow cheatsheet](https://danielkummer.github.io/git-flow-cheatsheet/).
-
-[Sourcetree](https://www.sourcetreeapp.com/) has built-in _git-flow_ support.
-
-```bash
-mkdir project && cd project
-git flow init
-```
+1. `git flow init`
 
 ## Branching
 
-```bash
-git checkout -b develop
-```
+1. `git checkout -b develop`
 
 ## Remote
 
-```bash
-git remote -v
-git remote rm origin
-git remote add origin https://github.com/ges0909/spring-demo.git
-```
+1. `git remote -v`
+1. `git remote rm origin`
+1. `git remote add origin git@github.com:<account>/<repo>.git`
 
 ## Repo renaming
 
 1. If available edit `.git/description` to change the display name.
-2. Rename local repo folder with `mv <from> <to>` <sup>1</sup>.
-3. Change remote URL with `git remote set-url origin git@github.com:ges0909/howto.git`.
+2. Rename local repo folder with `mv <from> <to>` .
+3. Change remote URL with `git remote set-url origin git@github.com:<account>/<repo>.git`.
 4. Rename project on remote (see `Settings` on [Github](https://github.com/)).
 
-  ::: tip
-  Take care about the right git protocol `git` (may be also `ssh`) or `https`.
-  :::
-
-<span style="font-size:smaller">[1]: `<..>` denotes placeholders</span>
+::: tip
+Take care about the right git protocol `git` (may be also `ssh`) or `https`.
+:::
