@@ -6,6 +6,7 @@ lang: en-US
 # Git
 
 Looking for a fast and sleek Git client, see [Fork](https://git-fork.com/).
+
 ## Git config
 
 1. `git config --global user.name "First Last"`
