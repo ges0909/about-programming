@@ -5,6 +5,44 @@ lang: en-US
 ---
 # Spring Boot
 
+Spring Boot is based upon the Spring Framework, which is at its core a dependency-injection
+container. Spring makes it easy to define everything in your application as loosely coupled components
+which Spring will tie together at run time. Spring also has a programming model that allows you to
+make abstractions from specific deployment environments.
+
+One of the key things you need to understand is that Spring is based on the concept of _Beans_ or
+_Components_, which are basically singletons. With dependency injection, each component declares the
+collaborators it needs, and Spring provides them at run time. The biggest advantage is that you can
+easily inject different instances for different deployment scenarios of your application (e.g., staging
+versus production versus unit tests).
+
+| Annotation    |                                                     |
+|---------------|-----------------------------------------------------|
+| `@Component`  | generic stereotype for any Spring-managed component |
+| `@Repository` | stereotype for persistence layer                    |
+| `@Service`    | stereotype for service layer                        |
+| `@Controller` | stereotype for presentation layer (spring-mvc)      |
+
+When annotating a method with the `@Bean` annotation, _JavaConfig_ will execute that method and register the return value as a bean within a _BeanFactory_. By default, the bean name will be the same as the method name.
+
+## Externalized Configuration
+
+### Properties file
+
+Default configuration: `application.yml`
+
+Profile-specific configuration: `application-dev.yml`, `application-prod.yml`,  etc.
+
+::: tip Note
+A property of a profile-specific configuration overwrites the one of the default configuration.
+:::
+
+### Command line
+
+### Environment variables
+
+## Packages by Layer vs. Feature
+
 ## Asynchronous Methods
 
 * `@Async`
@@ -17,23 +55,3 @@ lang: en-US
 * Query methods
 
 * JPQL
-
-## Properties
-
-* `application.yml`
-* `application-dev.yml`
-* `application-prod.yml`
-* order of loading
-
-## Components
-
-| Annotation    |                                                     |
-|---------------|-----------------------------------------------------|
-| `@Component`  | generic stereotype for any Spring-managed component |
-| `@Repository` | stereotype for persistence layer                    |
-| `@Service`    | stereotype for service layer                        |
-| `@Controller` | stereotype for presentation layer (spring-mvc)      |
-
-## Beans
-
-When annotating a method with the `@Bean` annotation, _JavaConfig_ will execute that method and register the return value as a bean within a _BeanFactory_. By default, the bean name will be the same as the method name.
