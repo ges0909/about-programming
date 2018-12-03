@@ -5,16 +5,9 @@ lang: en-US
 ---
 # Spring Boot
 
-Spring Boot is based upon the Spring Framework, which is at its core a dependency-injection
-container. Spring makes it easy to define everything in your application as loosely coupled components
-which Spring will tie together at run time. Spring also has a programming model that allows you to
-make abstractions from specific deployment environments.
+Spring Boot is based upon the Spring Framework, which is at its core a dependency-injection container. Spring makes it easy to define everything in your application as loosely coupled components which Spring will tie together at run time. Spring also has a programming model that allows you to make abstractions from specific deployment environments.
 
-One of the key things you need to understand is that Spring is based on the concept of _Beans_ or
-_Components_, which are basically singletons. With dependency injection, each component declares the
-collaborators it needs, and Spring provides them at run time. The biggest advantage is that you can
-easily inject different instances for different deployment scenarios of your application (e.g., staging
-versus production versus unit tests).
+One of the key things you need to understand is that Spring is based on the concept of _Beans_ or _Components_, which are basically singletons. With dependency injection, each component declares the collaborators it needs, and Spring provides them at run time. The biggest advantage is that you can easily inject different instances for different deployment scenarios of your application (e.g., staging versus production versus unit tests).
 
 | Annotation    |                                                     |
 |---------------|-----------------------------------------------------|
