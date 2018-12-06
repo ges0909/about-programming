@@ -25,11 +25,10 @@ Prerequisites:
 _Docker_ must be running and TLS must be **disabled** (_Settings_ > _General_ > _Expose daemon ... without TLS_).
 :::
 
-Install _Yeoman_ and _JHipster_:
+Install _JHipster_:
 
 ```bash
-yarn global add yo # install 'yeoman' globally
-yarn global add generator-jhipster
+yarn global add generator-jhipster # installs also 'yeoman' globally
 ```
 
 Upgrade to new _JHipster_ version:
