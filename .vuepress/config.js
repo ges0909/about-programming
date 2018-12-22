@@ -30,7 +30,8 @@ module.exports = {
         items: [
           { text: 'Git', link: '/md/tools/git' },
           { text: 'Gradle', link: '/md/tools/gradle' },
-          { text: 'Docker', link: '/md/tools/docker' }
+          { text: 'Docker', link: '/md/tools/docker' },
+          { text: 'Cmder', link: '/md/tools/cmder' }
         ]
       },
       {
