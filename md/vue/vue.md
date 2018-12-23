@@ -60,8 +60,7 @@ new Vue({
 
 Global:
 
-Components created using `Vue.component()` is globally registered and may used
-from anywhere in the application.
+Components created using `Vue.component()` is globally registered and may used from anywhere in the application.
 
 ```js
 <div id="app">
@@ -133,9 +132,9 @@ firebase deploy
 
 ## Debugging a Vue app with VS Code
 
-Install VS code extension [Debugger for Chrome](https://marketplace.visualstudio.com/items?itemName=msjsdiag.debugger-for-chrome).
+Install VS code extension [Debugger for Chrome](https://marketplace.visualstudio.com/items?itemName=msjsdiag.debugger-for-chrome) and/or [Debugger for Firefox](https://marketplace.visualstudio.com/items?itemName=hbenl.vscode-firefox-debug).
 
-Add file `vue.config.js` to project root.
+Add file `vue.config.js` to your project root.
 
 ```js
 module.exports = {
@@ -145,7 +144,7 @@ module.exports = {
 }
 ```
 
-Add file `.vscode/launch.json`.
+Add file `.vscode/launch.json` and insert launch configuration for _Chrome_ and/or _Firefox_.
 
 ```json
 {
@@ -161,15 +160,28 @@ Add file `.vscode/launch.json`.
       "sourceMapPathOverrides": {
         "webpack:///src/*": "${webRoot}/*"
       }
+    },
+    {
+      "type": "firefox",
+      "request": "launch",
+      "name": "vuejs: firefox",
+      "url": "http://localhost:8080",
+      "webRoot": "${workspaceFolder}/src",
+      "pathMappings": [
+        {
+          "url": "webpack:///src/",
+          "path": "${webRoot}/"
+        }
+      ]
     }
   ]
 }
 ```
 
-Start development server.
+Start _Vue_ development server.
 
 ```sh
 yarn serve
 ```
 
-Set breakpoint and start launch configuration.
+Set breakpoint(s) and run debugging via launch configuration.
