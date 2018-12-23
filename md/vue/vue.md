@@ -5,25 +5,33 @@ lang: en-US
 ---
 # Vue
 
-Read [The Vue Handbook: a thorough introduction to Vue.js](https://medium.freecodecamp.org/the-vue-handbook-a-thorough-introduction-to-vue-js-1e86835d8446).
+## Vue CLI
 
-## Vue cli
+### Install Vue CLI
 
-→ [Vue CLI 3 — the deep dive](https://blog.logrocket.com/vue-cli-3-the-deep-dive-41dff070ac4a)
-
-```bash
+```sh
 # install vue cli (version 3)
 yarn global add @vue/cli
 # test installation
-vue -V
-# create new project => !!! initial setup is comitted on 'master' !!!
-vue create <project name>
-# or create with presets stored in ~/.vue
-vue create -p <preset name> <project name>
+vue --version
+```
+
+### Create new project
+
+```sh
+# initial setup is comitted to branch 'master'
+vue create demo-project
+# change into project dir.
+cd  demo-project
+# optional: initialize repo for 'git flow'; checked-out branch will be 'develop'
+git flow init
+```
+
+### Run project
+
+```sh
 # serve .js or .vue file in development mode
-vue serve <file name>
-# build production ready bundle .js or .vue file
-vue build <file name>
+yarn serve
 ```
 
 ## Directives
@@ -123,19 +131,21 @@ Deploy application.
 firebase deploy
 ```
 
-## Debug
+## Debugging a Vue app with VS Code
 
-→ [Vue.js debugging in Chrome and VS Code](https://github.com/Microsoft/vscode-recipes/blob/master/vuejs-cli/README.md)
+Install VS code extension [Debugger for Chrome](https://marketplace.visualstudio.com/items?itemName=msjsdiag.debugger-for-chrome).
 
-[Debugger for Chrome](https://marketplace.visualstudio.com/items?itemName=msjsdiag.debugger-for-chrome) extension has to be installed.
-
-### Update `config/index.js`
+Add file `vue.config.js` to project root.
 
 ```js
-devtool: 'source-map',
+module.exports = {
+  configureWebpack: {
+    devtool: 'source-map'
+  }
+}
 ```
 
-### Configue `.vscode/launch.json`
+Add file `.vscode/launch.json`.
 
 ```json
 {
@@ -148,10 +158,18 @@ devtool: 'source-map',
       "url": "http://localhost:8080",
       "webRoot": "${workspaceFolder}/src",
       "breakOnLoad": true,
-        "sourceMapPathOverrides": {
-          "webpack:///src/*": "${webRoot}/*"
-        }
+      "sourceMapPathOverrides": {
+        "webpack:///src/*": "${webRoot}/*"
+      }
     }
   ]
 }
 ```
+
+Start development server.
+
+```sh
+yarn serve
+```
+
+Set breakpoint and start launch configuration.
