@@ -16,7 +16,7 @@ yarn global add @vue/cli
 vue --version
 ```
 
-### Create new project
+### Create project
 
 ```sh
 # initial setup is comitted to branch 'master'
@@ -32,6 +32,12 @@ git flow init
 ```sh
 # serve .js or .vue file in development mode
 yarn serve
+```
+
+### Add Less pre-processor
+
+```sh
+yarn add less-loader less --save-dev
 ```
 
 ## Directives

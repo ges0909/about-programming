@@ -12,6 +12,7 @@ lang: en-US
 | `npm update -g vuepress`  | `yarn global upgrade vuepress` |                                         |
 |                           | `yarn upgrade --latest`        | upgrade all `package.json` dependencies |
 |                           | `yarn global remove vuepress`  |                                         |
-|                           | `yarn autoclean --force`       |                                         |
 |                           | `yarn cache clean`             |                                         |
 | `npm list -g`             | `yarn global list`             |                                         |
+|                           | `yarn autoclean --init`        |                                         |
+|                           | `yarn autoclean --force`       |                                         |
