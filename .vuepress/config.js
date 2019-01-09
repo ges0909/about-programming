@@ -15,6 +15,7 @@ module.exports = {
           { text: 'Stream', link: '/md/java/stream' },
           { text: 'Optional', link: '/md/java/optional' },
           { text: 'Lambda', link: '/md/java/lambda' },
+          { text: 'AOP', link: '/md/java/aop' },
           { text: 'Unit Test', link: '/md/java/unittest' }
         ]
       },
