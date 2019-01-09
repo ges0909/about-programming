@@ -61,4 +61,3 @@ A property of a profile-specific configuration overwrites the one of the default
 * `@Query` / JPQL
 * Query by Example
 * Query methods
-
