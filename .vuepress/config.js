@@ -33,6 +33,7 @@ module.exports = {
           { text: 'Gradle', link: '/md/tools/gradle' },
           { text: 'Docker', link: '/md/tools/docker' },
           { text: 'Cmder', link: '/md/tools/cmder' }
+          { text: 'Ghost', link: '/md/tools/ghost' }
         ]
       },
       {
