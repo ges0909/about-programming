@@ -44,6 +44,7 @@ module.exports = {
         text: 'Misc',
         items: [
           { text: 'Npm/Yarn', link: '/md/misc/npm-yarn' },
+          { text: 'Elasticsearch', link: '/md/misc/elasticsearch' },
           { text: 'Serverless', link: '/md/misc/serverless' },
           { text: 'Gitbook', link: '/md/misc/gitbook' }
         ]

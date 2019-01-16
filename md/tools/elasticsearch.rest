@@ -1,0 +1,62 @@
+### Using Elasticsearch Examples
+@host = localhost:9200
+
+### get basic endpoint
+GET http://{{host}}/
+
+### add document to index 'accounts'
+POST http://{{host}}/accounts/person/1
+content-type: application/json
+
+{
+    "name" : "John",
+    "lastname" : "Doe",
+    "job_description" : "Systems administrator and Linux specialit"
+}
+
+### retrieve document
+GET http://{{host}}/accounts/person/1
+
+### update document
+POST http://{{host}}/accounts/person/1/_update
+content-type: application/json
+
+{
+      "doc":{
+       "job_description" : "Systems administrator and Linux specialist"
+     }
+}
+
+### add additional document
+POST http://{{host}}/accounts/person/2
+content-type: application/json
+
+{
+    "name" : "John",
+    "lastname" : "Smith",
+    "job_description" : "Systems administrator"
+}
+
+### search documents with query 'john' => finds 2 documents
+GET http://{{host}}/_search?q=john
+
+### search documents with query 'smith' => finds 1 documents
+GET http://{{host}}/_search?q=smith
+
+### restrict search to field 'job_description' => finds no documents
+GET http://{{host}}/_search?q=job_description:john
+
+### restrict search to field 'job_description' => finds 1 document
+GET http://{{host}}/accounts/person/_search?q=job_description:linux
+
+#### delete a document
+DELETE http://{{host}}/accounts/person/1
+
+### delete index
+DELETE http://{{host}}/accounts
+
+###########
+# Bulk data
+###########
+
+GET http://{{host}}/shakespeare
