@@ -60,3 +60,16 @@ DELETE http://{{host}}/accounts
 ###########
 
 GET http://{{host}}/shakespeare
+
+###
+GET http://{{host}}/shakespeare/_search
+content-type: application/json
+
+{
+    "query": {
+            "match_all": {}
+    }
+}
+
+###
+DELETE http://{{host}}/shakespeare

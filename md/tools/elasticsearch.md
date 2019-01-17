@@ -7,7 +7,7 @@ lang: en-US
   
 ## Installation
 
-Requires `Java 8`.
+Requires Java 8, _Oracle JDK version 1.8.0\_131_ is recommended.
 
 * `wget https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-6.5.4.zip`
 * `unzip elasticsearch-6.5.4.zip`
