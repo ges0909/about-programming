@@ -1,7 +1,7 @@
 ### Using Elasticsearch Examples
 @host = localhost:9200
 
-### get basic endpoint
+### get basic endpoint - curl localhost:9200/
 GET http://{{host}}/
 
 ### add document to index 'accounts'
@@ -14,7 +14,7 @@ content-type: application/json
     "job_description" : "Systems administrator and Linux specialit"
 }
 
-### retrieve document
+### retrieve document - curl localhost:9200/accounts/person/1?pretty
 GET http://{{host}}/accounts/person/1
 
 ### update document
