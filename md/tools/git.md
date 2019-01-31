@@ -16,7 +16,7 @@ Looking for a fast and sleek Git client, then see [Fork](https://git-fork.com/).
 
 - `mkdir project && cd project`
 - `git init` or `git flow init`
-- `git remote add origin git@github.com:<account>/<repo>.git`
+- `git remote add origin git@github.com:<account>/<repository>.git`
 - `git add .`
 - `git commit -a -m "initial commit"`
 - `git push -u origin --all`
@@ -29,13 +29,13 @@ Looking for a fast and sleek Git client, then see [Fork](https://git-fork.com/).
 
 - `git remote -v`
 - `git remote rm origin`
-- `git remote add origin git@github.com:<account>/<repo>.git`
+- `git remote add origin git@github.com:<account>/<repository>.git`
 
 ## Repository renaming
 
 - If available edit `.git/description` to change the display name.
 - Rename local repository folder with `mv <from> <to>` .
-- Change remote URL with `git remote set-url origin git@github.com:<account>/<repo>.git`.
+- Change remote URL with `git remote set-url origin git@github.com:<account>/<repository>.git`.
 - Rename project on remote (see `Settings` on [Github](https://github.com/)).
 
 Take care about the right git protocol `git` (may be also `ssh`) or `https`.
