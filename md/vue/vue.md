@@ -28,6 +28,20 @@ git flow init
 ```
 
 ### Run project
+=======
+### Create
+
+```sh
+# create new project => !!! initial setup is comitted on 'master' !!!
+vue create <project name>
+# or
+vue ui
+# or create with presets stored in ~/.vue
+vue create -p <preset name> <project name>
+```
+
+### Run
+>>>>>>> Stashed changes
 
 ```sh
 # serve .js or .vue file in development mode
@@ -39,6 +53,8 @@ yarn serve
 ```sh
 yarn add less-loader less --save-dev
 ```
+
+Further readings:  [Vue CLI 3 — the deep dive](https://blog.logrocket.com/vue-cli-3-the-deep-dive-41dff070ac4a)
 
 ## Directives
 
