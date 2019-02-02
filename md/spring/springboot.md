@@ -53,11 +53,11 @@ A property of a profile-specific configuration overwrites the one of the default
 
 ## Asynchronous Methods
 
-* `@Async`
-* [Spring Boot: Creating Asynchronous Methods Using @Async Annotation](https://dzone.com/articles/spring-boot-creating-asynchronous-methods-using-as?utm_medium=feed&utm_source=feedpress.me&utm_campaign=Feed:%20dzone%2Fjava)
+- `@Async`
+- [Spring Boot: Creating Asynchronous Methods Using @Async Annotation](https://dzone.com/articles/spring-boot-creating-asynchronous-methods-using-as?utm_medium=feed&utm_source=feedpress.me&utm_campaign=Feed:%20dzone%2Fjava)
 
 ## Custom Queries
 
-* `@Query` / JPQL
-* Query by Example
-* Query methods
+- `@Query` / JPQL
+- Query by Example
+- Query methods

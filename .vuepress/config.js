@@ -37,6 +37,10 @@ module.exports = {
         ]
       },
       {
+        text: 'IDE',
+        items: [ { text: 'ItelliJ', link: '/md/ide/intellij' } ]
+      },
+      {
         text: 'Vue',
         items: [ { text: 'Vue', link: '/md/vue/vue' }, { text: 'Vuepress', link: '/md/vue/vuepress' } ]
       },
